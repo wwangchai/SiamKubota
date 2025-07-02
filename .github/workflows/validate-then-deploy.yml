@@ -30,33 +30,33 @@ jobs:
         id: setenv
         run: |
           if [[ "${GITHUB_REF##*/}" == "main" ]]; then
-            SF_USERNAME="${{ secrets.SF_USERNAME_PROD }}"        ### FIXED LINE
-            SF_CONSUMER_KEY="${{ secrets.SF_CONSUMER_KEY_PROD }}"### FIXED LINE
-            SF_PRIVATE_KEY="${{ secrets.SF_PRIVATE_KEY_PROD }}"  ### FIXED LINE
-            SF_INSTANCE_URL="${{ secrets.SF_INSTANCE_URL_PROD }}"### FIXED LINE
+            SF_USERNAME="${{ secrets.SF_USERNAME_PROD }}"        
+            SF_CONSUMER_KEY="${{ secrets.SF_CONSUMER_KEY_PROD }}"
+            SF_PRIVATE_KEY="${{ secrets.SF_PRIVATE_KEY_PROD }}"  
+            SF_INSTANCE_URL="${{ secrets.SF_INSTANCE_URL_PROD }}"
           elif [[ "${GITHUB_REF##*/}" == "staging" ]]; then
-            SF_USERNAME="${{ secrets.SF_USERNAME_STAGING }}"     ### FIXED LINE
-            SF_CONSUMER_KEY="${{ secrets.SF_CONSUMER_KEY_STAGING }}"### FIXED LINE
-            SF_PRIVATE_KEY="${{ secrets.SF_PRIVATE_KEY_STAGING }}"### FIXED LINE
-            SF_INSTANCE_URL="${{ secrets.SF_INSTANCE_URL_STAGING }}"### FIXED LINE
+            SF_USERNAME="${{ secrets.SF_USERNAME_STAGING }}"     
+            SF_CONSUMER_KEY="${{ secrets.SF_CONSUMER_KEY_STAGING }}"
+            SF_PRIVATE_KEY="${{ secrets.SF_PRIVATE_KEY_STAGING }}"
+            SF_INSTANCE_URL="${{ secrets.SF_INSTANCE_URL_STAGING }}"
           else
             echo "Invalid branch for deployment. Exiting..."
             exit 1
           fi
 
-          : "${SF_USERNAME:?Missing SF_USERNAME secret}"         ### FIXED LINE
-          : "${SF_CONSUMER_KEY:?Missing SF_CONSUMER_KEY secret}" ### FIXED LINE
-          : "${SF_PRIVATE_KEY:?Missing SF_PRIVATE_KEY secret}"   ### FIXED LINE
-          : "${SF_INSTANCE_URL:?Missing SF_INSTANCE_URL secret}" ### FIXED LINE
+          : "${SF_USERNAME:?Missing SF_USERNAME secret}"         
+          : "${SF_CONSUMER_KEY:?Missing SF_CONSUMER_KEY secret}" 
+          : "${SF_PRIVATE_KEY:?Missing SF_PRIVATE_KEY secret}"   
+          : "${SF_INSTANCE_URL:?Missing SF_INSTANCE_URL secret}" 
 
           echo "SF_USERNAME=$SF_USERNAME" >> $GITHUB_ENV
           echo "SF_CONSUMER_KEY=$SF_CONSUMER_KEY" >> $GITHUB_ENV
-          echo "SF_PRIVATE_KEY_B64=$(echo "$SF_PRIVATE_KEY" | base64 -w0)" >> $GITHUB_ENV ### FIXED LINE
+          echo "SF_PRIVATE_KEY_B64=$(echo "$SF_PRIVATE_KEY" | base64 -w0)" >> $GITHUB_ENV 
           echo "SF_INSTANCE_URL=$SF_INSTANCE_URL" >> $GITHUB_ENV
 
       - name: Authorize with Salesforce using JWT
         run: |
-          echo "$SF_PRIVATE_KEY_B64" | base64 -d > server.key   ### FIXED LINE
+          echo "$SF_PRIVATE_KEY_B64" | base64 -d > server.key   
           sfdx auth:jwt:grant \
             --clientid "$SF_CONSUMER_KEY" \
             --jwtkeyfile server.key \
@@ -96,33 +96,33 @@ jobs:
         id: setenv
         run: |
           if [[ "${GITHUB_REF##*/}" == "main" ]]; then
-            SF_USERNAME="${{ secrets.SF_USERNAME_PROD }}"        ### FIXED LINE
-            SF_CONSUMER_KEY="${{ secrets.SF_CONSUMER_KEY_PROD }}"### FIXED LINE
-            SF_PRIVATE_KEY="${{ secrets.SF_PRIVATE_KEY_PROD }}"  ### FIXED LINE
-            SF_INSTANCE_URL="${{ secrets.SF_INSTANCE_URL_PROD }}"### FIXED LINE
+            SF_USERNAME="${{ secrets.SF_USERNAME_PROD }}"        
+            SF_CONSUMER_KEY="${{ secrets.SF_CONSUMER_KEY_PROD }}"
+            SF_PRIVATE_KEY="${{ secrets.SF_PRIVATE_KEY_PROD }}"  
+            SF_INSTANCE_URL="${{ secrets.SF_INSTANCE_URL_PROD }}"
           elif [[ "${GITHUB_REF##*/}" == "staging" ]]; then
-            SF_USERNAME="${{ secrets.SF_USERNAME_STAGING }}"     ### FIXED LINE
-            SF_CONSUMER_KEY="${{ secrets.SF_CONSUMER_KEY_STAGING }}"### FIXED LINE
-            SF_PRIVATE_KEY="${{ secrets.SF_PRIVATE_KEY_STAGING }}"### FIXED LINE
-            SF_INSTANCE_URL="${{ secrets.SF_INSTANCE_URL_STAGING }}"### FIXED LINE
+            SF_USERNAME="${{ secrets.SF_USERNAME_STAGING }}"     
+            SF_CONSUMER_KEY="${{ secrets.SF_CONSUMER_KEY_STAGING }}"
+            SF_PRIVATE_KEY="${{ secrets.SF_PRIVATE_KEY_STAGING }}"
+            SF_INSTANCE_URL="${{ secrets.SF_INSTANCE_URL_STAGING }}"
           else
             echo "Invalid branch for deployment. Exiting..."
             exit 1
           fi
 
-          : "${SF_USERNAME:?Missing SF_USERNAME secret}"         ### FIXED LINE
-          : "${SF_CONSUMER_KEY:?Missing SF_CONSUMER_KEY secret}" ### FIXED LINE
-          : "${SF_PRIVATE_KEY:?Missing SF_PRIVATE_KEY secret}"   ### FIXED LINE
-          : "${SF_INSTANCE_URL:?Missing SF_INSTANCE_URL secret}" ### FIXED LINE
+          : "${SF_USERNAME:?Missing SF_USERNAME secret}"         
+          : "${SF_CONSUMER_KEY:?Missing SF_CONSUMER_KEY secret}" 
+          : "${SF_PRIVATE_KEY:?Missing SF_PRIVATE_KEY secret}"   
+          : "${SF_INSTANCE_URL:?Missing SF_INSTANCE_URL secret}" 
 
           echo "SF_USERNAME=$SF_USERNAME" >> $GITHUB_ENV
           echo "SF_CONSUMER_KEY=$SF_CONSUMER_KEY" >> $GITHUB_ENV
-          echo "SF_PRIVATE_KEY_B64=$(echo "$SF_PRIVATE_KEY" | base64 -w0)" >> $GITHUB_ENV ### FIXED LINE
+          echo "SF_PRIVATE_KEY_B64=$(echo "$SF_PRIVATE_KEY" | base64 -w0)" >> $GITHUB_ENV 
           echo "SF_INSTANCE_URL=$SF_INSTANCE_URL" >> $GITHUB_ENV
 
       - name: Authorize with Salesforce using JWT
         run: |
-          echo "$SF_PRIVATE_KEY_B64" | base64 -d > server.key   ### FIXED LINE
+          echo "$SF_PRIVATE_KEY_B64" | base64 -d > server.key   
           sfdx auth:jwt:grant \
             --clientid "$SF_CONSUMER_KEY" \
             --jwtkeyfile server.key \
