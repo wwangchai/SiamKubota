@@ -1,0 +1,141 @@
+name: Validate and Deploy Salesforce Metadata from Package.xml
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+
+jobs:
+  validate:
+    name: Validate Metadata with Check-Only
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Salesforce CLI
+        run: |
+          wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable-rc/sfdx-linux-x64.tar.xz
+          mkdir -p sfdx-cli
+          tar xJf sfdx-linux-x64.tar.xz -C sfdx-cli --strip-components 1
+          echo "$PWD/sfdx-cli/bin" >> $GITHUB_PATH
+
+      - name: Verify Salesforce CLI
+        run: sfdx --version
+
+      - name: Set environment variables based on branch
+        id: setenv
+        run: |
+          if [[ "${GITHUB_REF##*/}" == "main" ]]; then
+            SF_USERNAME="${{ secrets.SF_USERNAME_PROD }}"        ### FIXED LINE
+            SF_CONSUMER_KEY="${{ secrets.SF_CONSUMER_KEY_PROD }}"### FIXED LINE
+            SF_PRIVATE_KEY="${{ secrets.SF_PRIVATE_KEY_PROD }}"  ### FIXED LINE
+            SF_INSTANCE_URL="${{ secrets.SF_INSTANCE_URL_PROD }}"### FIXED LINE
+          elif [[ "${GITHUB_REF##*/}" == "staging" ]]; then
+            SF_USERNAME="${{ secrets.SF_USERNAME_STAGING }}"     ### FIXED LINE
+            SF_CONSUMER_KEY="${{ secrets.SF_CONSUMER_KEY_STAGING }}"### FIXED LINE
+            SF_PRIVATE_KEY="${{ secrets.SF_PRIVATE_KEY_STAGING }}"### FIXED LINE
+            SF_INSTANCE_URL="${{ secrets.SF_INSTANCE_URL_STAGING }}"### FIXED LINE
+          else
+            echo "Invalid branch for deployment. Exiting..."
+            exit 1
+          fi
+
+          : "${SF_USERNAME:?Missing SF_USERNAME secret}"         ### FIXED LINE
+          : "${SF_CONSUMER_KEY:?Missing SF_CONSUMER_KEY secret}" ### FIXED LINE
+          : "${SF_PRIVATE_KEY:?Missing SF_PRIVATE_KEY secret}"   ### FIXED LINE
+          : "${SF_INSTANCE_URL:?Missing SF_INSTANCE_URL secret}" ### FIXED LINE
+
+          echo "SF_USERNAME=$SF_USERNAME" >> $GITHUB_ENV
+          echo "SF_CONSUMER_KEY=$SF_CONSUMER_KEY" >> $GITHUB_ENV
+          echo "SF_PRIVATE_KEY_B64=$(echo "$SF_PRIVATE_KEY" | base64 -w0)" >> $GITHUB_ENV ### FIXED LINE
+          echo "SF_INSTANCE_URL=$SF_INSTANCE_URL" >> $GITHUB_ENV
+
+      - name: Authorize with Salesforce using JWT
+        run: |
+          echo "$SF_PRIVATE_KEY_B64" | base64 -d > server.key   ### FIXED LINE
+          sfdx auth:jwt:grant \
+            --clientid "$SF_CONSUMER_KEY" \
+            --jwtkeyfile server.key \
+            --username "$SF_USERNAME" \
+            --instanceurl "$SF_INSTANCE_URL" \
+            --setdefaultusername
+
+      - name: Validate deployment using package.xml
+        run: |
+          sfdx force:source:deploy \
+            --manifest force-app/package.xml \
+            --checkonly \
+            --testlevel RunLocalTests \
+            --wait 30
+
+      - name: Clean up
+        run: rm server.key
+
+  deploy:
+    name: Deploy Metadata to Salesforce
+    runs-on: ubuntu-latest
+    needs: validate
+    environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Salesforce CLI
+        run: |
+          wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable-rc/sfdx-linux-x64.tar.xz
+          mkdir -p sfdx-cli
+          tar xJf sfdx-linux-x64.tar.xz -C sfdx-cli --strip-components 1
+          echo "$PWD/sfdx-cli/bin" >> $GITHUB_PATH
+
+      - name: Set environment variables based on branch
+        id: setenv
+        run: |
+          if [[ "${GITHUB_REF##*/}" == "main" ]]; then
+            SF_USERNAME="${{ secrets.SF_USERNAME_PROD }}"        ### FIXED LINE
+            SF_CONSUMER_KEY="${{ secrets.SF_CONSUMER_KEY_PROD }}"### FIXED LINE
+            SF_PRIVATE_KEY="${{ secrets.SF_PRIVATE_KEY_PROD }}"  ### FIXED LINE
+            SF_INSTANCE_URL="${{ secrets.SF_INSTANCE_URL_PROD }}"### FIXED LINE
+          elif [[ "${GITHUB_REF##*/}" == "staging" ]]; then
+            SF_USERNAME="${{ secrets.SF_USERNAME_STAGING }}"     ### FIXED LINE
+            SF_CONSUMER_KEY="${{ secrets.SF_CONSUMER_KEY_STAGING }}"### FIXED LINE
+            SF_PRIVATE_KEY="${{ secrets.SF_PRIVATE_KEY_STAGING }}"### FIXED LINE
+            SF_INSTANCE_URL="${{ secrets.SF_INSTANCE_URL_STAGING }}"### FIXED LINE
+          else
+            echo "Invalid branch for deployment. Exiting..."
+            exit 1
+          fi
+
+          : "${SF_USERNAME:?Missing SF_USERNAME secret}"         ### FIXED LINE
+          : "${SF_CONSUMER_KEY:?Missing SF_CONSUMER_KEY secret}" ### FIXED LINE
+          : "${SF_PRIVATE_KEY:?Missing SF_PRIVATE_KEY secret}"   ### FIXED LINE
+          : "${SF_INSTANCE_URL:?Missing SF_INSTANCE_URL secret}" ### FIXED LINE
+
+          echo "SF_USERNAME=$SF_USERNAME" >> $GITHUB_ENV
+          echo "SF_CONSUMER_KEY=$SF_CONSUMER_KEY" >> $GITHUB_ENV
+          echo "SF_PRIVATE_KEY_B64=$(echo "$SF_PRIVATE_KEY" | base64 -w0)" >> $GITHUB_ENV ### FIXED LINE
+          echo "SF_INSTANCE_URL=$SF_INSTANCE_URL" >> $GITHUB_ENV
+
+      - name: Authorize with Salesforce using JWT
+        run: |
+          echo "$SF_PRIVATE_KEY_B64" | base64 -d > server.key   ### FIXED LINE
+          sfdx auth:jwt:grant \
+            --clientid "$SF_CONSUMER_KEY" \
+            --jwtkeyfile server.key \
+            --username "$SF_USERNAME" \
+            --instanceurl "$SF_INSTANCE_URL" \
+            --setdefaultusername
+
+      - name: Deploy using package.xml
+        run: |
+          sfdx force:source:deploy \
+            --manifest force-app/package.xml \
+            --testlevel RunLocalTests \
+            --wait 30
+
+      - name: Clean up
+        run: rm server.key
