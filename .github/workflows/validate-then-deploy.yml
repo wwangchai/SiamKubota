@@ -54,6 +54,10 @@ jobs:
           echo "SF_PRIVATE_KEY_B64=$(echo "$SF_PRIVATE_KEY" | base64 -w0)" >> $GITHUB_ENV 
           echo "SF_INSTANCE_URL=$SF_INSTANCE_URL" >> $GITHUB_ENV
 
+          # 🔹 Get test level and list of tests from variables
+          echo "SF_TESTLEVEL=${{ vars.SF_TESTLEVEL || 'RunLocalTests' }}" >> $GITHUB_ENV
+          echo "TEST_CLASSES=${{ vars.TEST_CLASSES || '' }}" >> $GITHUB_ENV
+
       - name: Authorize with Salesforce using JWT
         run: |
           echo "$SF_PRIVATE_KEY_B64" | base64 -d > server.key   
@@ -66,11 +70,19 @@ jobs:
 
       - name: Validate deployment using package.xml
         run: |
-          sfdx force:source:deploy \
+          CMD="sfdx force:source:deploy \
             --manifest force-app/package.xml \
             --checkonly \
-            --testlevel RunLocalTests \
-            --wait 30
+            --testlevel $SF_TESTLEVEL \
+            --wait 30"
+
+          # 🔹 Add --runtests if testlevel=RunSpecifiedTests and TEST_CLASSES is not empty
+          if [[ "$SF_TESTLEVEL" == "RunSpecifiedTests" && -n "$TEST_CLASSES" ]]; then
+            CMD="$CMD --runtests $TEST_CLASSES"
+          fi
+
+          echo "Running: $CMD"
+          eval $CMD
 
       - name: Clean up
         run: rm server.key
@@ -120,6 +132,10 @@ jobs:
           echo "SF_PRIVATE_KEY_B64=$(echo "$SF_PRIVATE_KEY" | base64 -w0)" >> $GITHUB_ENV 
           echo "SF_INSTANCE_URL=$SF_INSTANCE_URL" >> $GITHUB_ENV
 
+          # 🔹 Get test level and list of tests from variables
+          echo "SF_TESTLEVEL=${{ vars.SF_TESTLEVEL || 'RunLocalTests' }}" >> $GITHUB_ENV
+          echo "TEST_CLASSES=${{ vars.TEST_CLASSES || '' }}" >> $GITHUB_ENV
+
       - name: Authorize with Salesforce using JWT
         run: |
           echo "$SF_PRIVATE_KEY_B64" | base64 -d > server.key   
@@ -132,10 +148,18 @@ jobs:
 
       - name: Deploy using package.xml
         run: |
-          sfdx force:source:deploy \
+          CMD="sfdx force:source:deploy \
             --manifest force-app/package.xml \
-            --testlevel RunLocalTests \
-            --wait 30
+            --testlevel $SF_TESTLEVEL \
+            --wait 30"
+
+          # 🔹 Add --runtests if testlevel=RunSpecifiedTests and TEST_CLASSES is not empty
+          if [[ "$SF_TESTLEVEL" == "RunSpecifiedTests" && -n "$TEST_CLASSES" ]]; then
+            CMD="$CMD --runtests $TEST_CLASSES"
+          fi
+
+          echo "Running: $CMD"
+          eval $CMD
 
       - name: Clean up
         run: rm server.key
