@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AutoCloud Phase 1 Implementation v2</fullName>
+    <types>
+        <members>Task.TS_Appointment</members>
+        <name>CompactLayout</name>
+    </types>
+    <types>
+        <members>Activity.Appointment_Date__c</members>
+        <members>Activity.Assigned_to_Dealer_Name__c</members>
+        <members>Activity.Case__c</members>
+        <members>Activity.Description__c</members>
+        <members>Activity.Distance_to_Account__c</members>
+        <members>Activity.Name__c</members>
+        <members>Activity.Phone_Suggestion__c</members>
+        <members>Activity.Progress__c</members>
+        <members>Activity.Response_person__c</members>
+        <members>Activity.SF_Auto_No__c</members>
+        <members>Activity.Service_Date__c</members>
+        <members>Activity.Task_Status__c</members>
+        <members>LeadLineItem.Interested_Product_No__c</members>
+        <members>LeadLineItem.Product_Description__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>AC_Lead_Create_Lead_Line_Item</members>
+        <members>AC_Lead_Update_Interested_Product</members>
+        <members>Case_Create_TS_Appointment_and_fill_asset_info</members>
+        <members>TS_Appointment_resolve_case_on_flow</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Event-Event Layout</members>
+        <members>Lead-Dealer Lead</members>
+        <members>Lead-Lead Layout</members>
+        <members>Lead-New CRM Lead</members>
+        <members>Lead-New CRM Lead Oversea</members>
+        <members>Lead-New Dealer Lead</members>
+        <members>LeadLineItem-Default</members>
+        <members>Product2-Product Layout</members>
+        <members>Task-TS Appointment</members>
+        <members>Task-TS Appointment %28Read Only%29</members>
+        <members>Task-Task Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Task.TS_Appointment</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>CRM In Bound-Out Bound Agent Oversea</members>
+        <members>CRM Inbound Agent</members>
+        <members>CRM Manager Domestic and Oversea</members>
+        <members>CRM Outbound Agent</members>
+        <members>CRM Supervisor and Manager</members>
+        <members>CRM Supervisor and Manager Oversea</members>
+        <members>TS Agent</members>
+        <members>TS Supervisor and Manager</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>FeedItem.NewTSAppointment</members>
+        <members>NewTask</members>
+        <members>New_TS_Appointment</members>
+        <name>QuickAction</name>
+    </types>
+    <types>
+        <members>Task.General_Task</members>
+        <members>Task.TS_Appointment</members>
+        <members>Task.TS_Appointment_Resolve</members>
+        <name>RecordType</name>
+    </types>
+    <version>48.0</version>
+</Package>

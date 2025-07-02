@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TS_Appointment</fullName>
+    <fields>SF_Auto_No__c</fields>
+    <fields>Case__c</fields>
+    <fields>Assigned_to_Dealer__c</fields>
+    <fields>OJ_No__c</fields>
+    <fields>Appointment_Date__c</fields>
+    <fields>Service_Date__c</fields>
+    <fields>Task_Status__c</fields>
+    <label>TS Appointment</label>
+</CompactLayout>

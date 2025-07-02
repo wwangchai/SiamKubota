@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SF_Auto_No__c</fullName>
+    <displayFormat>TSF-{DD}{MM}{YY}-{00000}</displayFormat>
+    <externalId>false</externalId>
+    <label>SF Auto No.</label>
+    <type>AutoNumber</type>
+</CustomField>
