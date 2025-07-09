@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>สถานะ</label>
+    <name>Progress__c</name>
+    <picklistValues>
+        <masterLabel>ดำเนินการ</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ปิดงาน</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ยกเลิกการบริการ</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>รออนุมัติแผน</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>รออะไหล่</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>
