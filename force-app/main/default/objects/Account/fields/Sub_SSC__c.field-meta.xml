@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_SSC__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub SSC</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Main_SSC__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>SKC_Service_Center</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ พิษณุโลก</controllingFieldValue>
+            <valueName>ศูนย์ฯ พิษณุโลก</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ พิษณุโลก</controllingFieldValue>
+            <valueName>ศูนย์ฯ อุตรดิตถ์</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ พิษณุโลก</controllingFieldValue>
+            <controllingFieldValue>ศูนย์ฯ นครสวรรค์</controllingFieldValue>
+            <valueName>ศูนย์ฯ เพชรบูรณ์</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สกลนคร</controllingFieldValue>
+            <valueName>ศูนย์ฯ สกลนคร</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สกลนคร</controllingFieldValue>
+            <valueName>ศูนย์ฯ นครพนม</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ อุดรธานี</controllingFieldValue>
+            <valueName>ศูนย์ฯ อุดรธานี</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ อุดรธานี</controllingFieldValue>
+            <valueName>ศูนย์ฯ เลย</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ ขอนแก่น</controllingFieldValue>
+            <valueName>ศูนย์ฯ ขอนแก่น</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ ร้อยเอ็ด</controllingFieldValue>
+            <valueName>ศูนย์ฯ ร้อยเอ็ด</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ ร้อยเอ็ด</controllingFieldValue>
+            <valueName>ศูนย์ฯ ยโสธร</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ นครราชสีมา</controllingFieldValue>
+            <valueName>ศูนย์ฯ นครราชสีมา</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ นครราชสีมา</controllingFieldValue>
+            <valueName>ศูนย์ฯ ชัยภูมิ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สุรินทร์</controllingFieldValue>
+            <valueName>ศูนย์ฯ สุรินทร์</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ อุบลราชธานี</controllingFieldValue>
+            <valueName>ศูนย์ฯ อุบลราชธานี</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ อุบลราชธานี</controllingFieldValue>
+            <valueName>ศูนย์ฯ ศรีสะเกษ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>คูโบต้า สำนักงานใหญ่ (นวนคร)</controllingFieldValue>
+            <valueName>คูโบต้า สำนักงานใหญ่ (นวนคร)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สระแก้ว</controllingFieldValue>
+            <valueName>ศูนย์ฯ สระแก้ว</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สระแก้ว</controllingFieldValue>
+            <valueName>ศูนย์ฯ จันทบุรี</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สระแก้ว</controllingFieldValue>
+            <valueName>ศูนย์ฯ ฉะเชิงเทรา</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สระบุรี</controllingFieldValue>
+            <valueName>ศูนย์ฯ ลพบุรี</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สระบุรี</controllingFieldValue>
+            <valueName>ศูนย์ฯ สระบุรี</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สุพรรณบุรี</controllingFieldValue>
+            <valueName>ศูนย์ฯ สุพรรณบุรี</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สุพรรณบุรี</controllingFieldValue>
+            <valueName>ศูนย์ฯ ชัยนาท</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ กาญจนบุรี</controllingFieldValue>
+            <valueName>ศูนย์ฯ กาญจนบุรี</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ กาญจนบุรี</controllingFieldValue>
+            <valueName>ศูนย์ฯ เพชรบุรี</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สุราษฎร์ธานี</controllingFieldValue>
+            <valueName>ศูนย์ฯ สุราษฎร์ธานี</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สุราษฎร์ธานี</controllingFieldValue>
+            <valueName>ศูนย์ฯ กระบี่</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ สุราษฎร์ธานี</controllingFieldValue>
+            <valueName>ศูนย์ฯ ทุ่งสง</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ หาดใหญ่</controllingFieldValue>
+            <valueName>ศูนย์ฯ หาดใหญ่</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ หาดใหญ่</controllingFieldValue>
+            <valueName>ศูนย์ฯ พัทลุง</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ เชียงใหม่</controllingFieldValue>
+            <valueName>ศูนย์ฯ เชียงใหม่</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ เชียงใหม่</controllingFieldValue>
+            <controllingFieldValue>ศูนย์ฯ กำแพงเพชร</controllingFieldValue>
+            <valueName>ศูนย์ฯ ตาก</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ เชียงราย</controllingFieldValue>
+            <valueName>ศูนย์ฯ เชียงราย</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ เชียงราย</controllingFieldValue>
+            <valueName>ศูนย์ฯ แพร่</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ กำแพงเพชร</controllingFieldValue>
+            <valueName>ศูนย์ฯ กำแพงเพชร</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ศูนย์ฯ นครสวรรค์</controllingFieldValue>
+            <valueName>ศูนย์ฯ นครสวรรค์</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

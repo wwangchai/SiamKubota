@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kubota_App_Lead</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Id_Card_No__c</columns>
+    <columns>Consent__c</columns>
+    <columns>Mobile_Phone_1__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Activity_Code__c</columns>
+    <columns>Activity_Date__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Is_Customer__c</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Data_Source__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>notEqual</operation>
+        <value>Lead.Migrated_Lead</value>
+    </filters>
+    <filters>
+        <field>Data_Source__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Kubota_App_User</value>
+    </filters>
+    <label>Kubota App Lead</label>
+</ListView>

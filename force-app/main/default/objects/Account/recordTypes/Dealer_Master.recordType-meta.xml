@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dealer_Master</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Dealer_Master</compactLayoutAssignment>
+    <label>Dealer Master</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KUBOTA Family App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kubota Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kubota Connect Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kubota Kampuchea Club</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kubota Lao Club</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LINE%40</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Siam Kubota Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Siam Kubota Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>โทรศ%E0%B8%B1พท%E0%B9%8C%2FCall</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Main_SSC__c</picklist>
+        <values>
+            <fullName>ค%E0%B8%B9โบต%E0%B9%89า สำน%E0%B8%B1กงานใหญ%E0%B9%88 %28นวนคร%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ กาญจนบ%E0%B8%B8ร%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ กำแพงเพชร</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ขอนแก%E0%B9%88น</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ นครราชส%E0%B8%B5มา</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ นครสวรรค%E0%B9%8C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ พ%E0%B8%B4ษณ%E0%B8%B8โลก</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ร%E0%B9%89อยเอ%E0%B9%87ด</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ส%E0%B8%B8พรรณบ%E0%B8%B8ร%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ส%E0%B8%B8ร%E0%B8%B4นทร%E0%B9%8C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ส%E0%B8%B8ราษฎร%E0%B9%8Cธาน%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ สกลนคร</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ สระบ%E0%B8%B8ร%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ สระแก%E0%B9%89ว</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ หาดใหญ%E0%B9%88</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ อ%E0%B8%B8ดรธาน%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ อ%E0%B8%B8บลราชธาน%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ เช%E0%B8%B5ยงราย</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ เช%E0%B8%B5ยงใหม%E0%B9%88</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_SSC__c</picklist>
+        <values>
+            <fullName>ค%E0%B8%B9โบต%E0%B9%89า สำน%E0%B8%B1กงานใหญ%E0%B9%88 %28นวนคร%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ กระบ%E0%B8%B5%E0%B9%88</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ กาญจนบ%E0%B8%B8ร%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ กำแพงเพชร</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ขอนแก%E0%B9%88น</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ จ%E0%B8%B1นทบ%E0%B8%B8ร%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ฉะเช%E0%B8%B4งเทรา</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ช%E0%B8%B1ยนาท</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ช%E0%B8%B1ยภ%E0%B8%B9ม%E0%B8%B4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ตาก</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ท%E0%B8%B8%E0%B9%88งสง</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ นครพนม</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ นครราชส%E0%B8%B5มา</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ นครสวรรค%E0%B9%8C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ พ%E0%B8%B1ทล%E0%B8%B8ง</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ พ%E0%B8%B4ษณ%E0%B8%B8โลก</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ยโสธร</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ร%E0%B9%89อยเอ%E0%B9%87ด</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ลพบ%E0%B8%B8ร%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ศร%E0%B8%B5สะเกษ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ส%E0%B8%B8พรรณบ%E0%B8%B8ร%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ส%E0%B8%B8ร%E0%B8%B4นทร%E0%B9%8C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ ส%E0%B8%B8ราษฎร%E0%B9%8Cธาน%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ สกลนคร</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ สระบ%E0%B8%B8ร%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ สระแก%E0%B9%89ว</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ หาดใหญ%E0%B9%88</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ อ%E0%B8%B8ดรธาน%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ อ%E0%B8%B8ตรด%E0%B8%B4ตถ%E0%B9%8C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ อ%E0%B8%B8บลราชธาน%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ เช%E0%B8%B5ยงราย</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ เช%E0%B8%B5ยงใหม%E0%B9%88</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ เพชรบ%E0%B8%B8ร%E0%B8%B5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ เลย</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ แพร%E0%B9%88</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ศ%E0%B8%B9นย%E0%B9%8Cฯ%C2%A0เพชรบ%E0%B8%B9รณ%E0%B9%8C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-VIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
