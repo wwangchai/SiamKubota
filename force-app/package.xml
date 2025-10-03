@@ -85,7 +85,6 @@
         <name>Flow</name>
     </types>
     <types>
-        <members>Account-Account Layout</members>
         <members>Account-Dealer Account</members>
         <members>Account-Dealer Master</members>
         <members>Asset-Asset Layout</members>
