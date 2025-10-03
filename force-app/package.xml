@@ -1,50 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>AutoCloud Phase 1 Implementation v2</fullName>
+    <fullName>AC Phase 2 - Dealer</fullName>
     <types>
-        <members>Task.TS_Appointment</members>
-        <name>CompactLayout</name>
+        <members>AccountUpdateTrigger</members>
+        <name>ApexTrigger</name>
     </types>
     <types>
-        <members>Activity.Appointment_Date__c</members>
-        <members>Activity.Assigned_to_Dealer_Name__c</members>
-        <members>Activity.Case__c</members>
-        <members>Activity.Description__c</members>
-        <members>Activity.Distance_to_Account__c</members>
-        <members>Activity.Name__c</members>
-        <members>Activity.Phone_Suggestion__c</members>
-        <members>Activity.Progress__c</members>
-        <members>Activity.Response_person__c</members>
-        <members>Activity.SF_Auto_No__c</members>
-        <members>Activity.Service_Date__c</members>
-        <members>Activity.Task_Status__c</members>
-        <members>LeadLineItem.Interested_Product_No__c</members>
-        <members>LeadLineItem.Product_Description__c</members>
+        <members>Account.ADMS_Code__c</members>
+        <members>Account.Company_Code_KADS__c</members>
+        <members>Account.Dealer_Code_Master__c</members>
+        <members>Account.Dealer_Email_2__c</members>
+        <members>Account.Dealer_Name__c</members>
+        <members>Account.Dealer_Plant_Code__c</members>
+        <members>Account.Email_Adress__c</members>
+        <members>Account.KDS_CreateDate__c</members>
+        <members>Account.Lead_follow_up_period_Days__c</members>
+        <members>Account.Main_Branch__c</members>
+        <members>Account.Main_SSC__c</members>
+        <members>Account.Original_Dealer_SF_ID__c</members>
+        <members>Account.Plant_Name__c</members>
+        <members>Account.RecordID__c</members>
+        <members>Account.Remark_Edit__c</members>
+        <members>Account.Remark__c</members>
+        <members>Account.Sale_Org_Code__c</members>
+        <members>Account.Sale_Org_Name__c</members>
+        <members>Account.Search_Keyword__c</members>
+        <members>Account.Shipto__c</members>
+        <members>Account.Shipto_name__c</members>
+        <members>Account.Sold_to__c</members>
+        <members>Account.Store_province__c</members>
+        <members>Account.Sub_SSC__c</members>
+        <members>Account.Zone__c</members>
+        <members>Asset.After_sales_service_dealer_account__c</members>
+        <members>Asset.Customer_Type__c</members>
+        <members>Asset.Daily_Sales_Kads_Order__c</members>
+        <members>Asset.Data_Source__c</members>
+        <members>Asset.Dealer_Name__c</members>
+        <members>Asset.Dealer_Old_Id__c</members>
+        <members>Asset.Entry_ID__c</members>
+        <members>Asset.Firstname__c</members>
+        <members>Asset.Gender__c</members>
+        <members>Asset.Home_No__c</members>
+        <members>Asset.Key_Date__c</members>
+        <members>Asset.Lastname__c</members>
+        <members>Asset.Mobile_Phone_1__c</members>
+        <members>Asset.Mobile_Phone_2__c</members>
+        <members>Asset.Model__c</members>
+        <members>Asset.Moo__c</members>
+        <members>Asset.Post_code__c</members>
+        <members>Asset.Product_Code__c</members>
+        <members>Asset.Product_Description_Diesel_Engine__c</members>
+        <members>Asset.Product_Type__c</members>
+        <members>Asset.Purchase_Date__c</members>
+        <members>Asset.Purchase_Status__c</members>
+        <members>Asset.Salutation__c</members>
+        <members>Asset.Shop_Name_Account__c</members>
+        <members>Lead.Citizen_Id__c</members>
+        <members>Lead.Country_ID__c</members>
+        <members>Lead.Dealer_Lead_Lookup_Account__c</members>
+        <members>Lead.Dealer_Name_Account__c</members>
+        <members>Lead.Dealer_Name_Questionnaire_Account__c</members>
+        <members>Lead.District_ID__c</members>
+        <members>Lead.First_Name_Native__c</members>
+        <members>Lead.Kubota_Id__c</members>
+        <members>Lead.Last_Name_Native__c</members>
+        <members>Lead.Mobile_ID__c</members>
+        <members>Lead.Mobile_phone_no_1__c</members>
+        <members>Lead.Postcode_ID__c</members>
+        <members>Lead.Province_ID__c</members>
+        <members>Lead.Record_Type_Name__c</members>
+        <members>Lead.Related_DailySales_KADs__c</members>
+        <members>Lead.Related_Lead__c</members>
+        <members>Lead.SF_id_18_digit__c</members>
+        <members>Lead.Street_ID__c</members>
+        <members>Lead.Sub_District_ID__c</members>
+        <members>Lead.User_No__c</members>
+        <members>Lead.Village_ID__c</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>AC_Lead_Create_Lead_Line_Item</members>
-        <members>AC_Lead_Update_Interested_Product</members>
-        <members>Case_Create_TS_Appointment_and_fill_asset_info</members>
-        <members>TS_Appointment_resolve_case_on_flow</members>
+        <members>AC_Account_Dealer_Populate_Shop_Name</members>
+        <members>AC_Asset_Migrate_Shop_Name_Account_1_Time_Run</members>
+        <members>AC_Asset_Populate_Product_and_Account_Dealer_on_Creation</members>
         <name>Flow</name>
     </types>
     <types>
-        <members>Event-Event Layout</members>
-        <members>Lead-Dealer Lead</members>
-        <members>Lead-Lead Layout</members>
-        <members>Lead-New CRM Lead</members>
-        <members>Lead-New CRM Lead Oversea</members>
-        <members>Lead-New Dealer Lead</members>
-        <members>LeadLineItem-Default</members>
-        <members>Product2-Product Layout</members>
-        <members>Task-TS Appointment</members>
-        <members>Task-TS Appointment %28Read Only%29</members>
-        <members>Task-Task Layout</members>
+        <members>Account-Account Layout</members>
+        <members>Account-Dealer Account</members>
+        <members>Account-Dealer Master</members>
+        <members>Asset-Asset Layout</members>
         <name>Layout</name>
     </types>
     <types>
-        <members>Task.TS_Appointment</members>
+        <members>Account.Dealer_Master</members>
+        <members>Account.Dealer_Master_All_Dealers</members>
+        <members>Account.Dealer_Master_All_Dealers_Sakeao</members>
+        <members>Account.Dealer_Master_All_SSC</members>
+        <members>Account.Dealer_Master_Main_Dealer</members>
+        <members>Asset.Diesel_Engine</members>
+        <members>Lead.Kubota_App_Lead</members>
+        <members>Lead.Kubota_App_User_All</members>
         <name>ListView</name>
     </types>
     <types>
@@ -59,16 +114,14 @@
         <name>Profile</name>
     </types>
     <types>
-        <members>FeedItem.NewTSAppointment</members>
-        <members>NewTask</members>
-        <members>New_TS_Appointment</members>
-        <name>QuickAction</name>
-    </types>
-    <types>
-        <members>Task.General_Task</members>
-        <members>Task.TS_Appointment</members>
-        <members>Task.TS_Appointment_Resolve</members>
+        <members>Account.Dealer_Account</members>
+        <members>Account.Dealer_Master</members>
+        <members>Account.SKC_Default</members>
         <name>RecordType</name>
     </types>
-    <version>48.0</version>
+    <types>
+        <members>Account.Supervisor_not_allowed_edit_dealer</members>
+        <name>ValidationRule</name>
+    </types>
+    <version>60.0</version>
 </Package>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supervisor_not_allowed_edit_dealer</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($Profile.Name = &quot;CRM Supervisor and Manager&quot;, !ISNEW(),  RecordType.Name = &quot;Dealer Master&quot;)</errorConditionFormula>
+    <errorMessage>ไม่สามารถแก้ไขข้อมูล Dealer ได้</errorMessage>
+</ValidationRule>
