@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Oversea</fullName>
+    <columns>NAME</columns>
+    <columns>Welcome_Call_Type__c</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Chassis_No__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Mobile_number_1__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>WelcomeCall__c.WelcomeCall_Oversea,WelcomeCall__c.WelcomeCall_Oversea_Resolve</value>
+    </filters>
+    <label>Welcome Call Oversea: All</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CRM_Agent_Cambodia</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>CRM_Agent_Laos</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>CRM_Manager_Cambodia</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>CRM_Manager_Laos</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>CRM_Overseas_inbound_outbound_agent</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>CRM_Overseas_manager</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Overseas</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

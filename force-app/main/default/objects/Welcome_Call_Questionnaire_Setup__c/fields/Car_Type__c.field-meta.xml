@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Car_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Car Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TRACTOR</fullName>
+                <default>false</default>
+                <label>TRACTOR (รถแทรกเตอร์)</label>
+            </value>
+            <value>
+                <fullName>COMBINE HARVESTER</fullName>
+                <default>false</default>
+                <label>COMBINE HARVESTER (รถเกี่ยวข้าว)</label>
+            </value>
+            <value>
+                <fullName>RICE TRANSPLANTER</fullName>
+                <default>false</default>
+                <label>RICE TRANSPLANTER (รถดำนา)</label>
+            </value>
+            <value>
+                <fullName>MINI EXCAVATOR</fullName>
+                <default>false</default>
+                <label>MINI EXCAVATOR (รถขุด)</label>
+            </value>
+            <value>
+                <fullName>SUGARCANE HARVESTER</fullName>
+                <default>false</default>
+                <label>SUGARCANE HARVESTER (รถตัดอ้อย)</label>
+            </value>
+            <value>
+                <fullName>DRONE</fullName>
+                <default>false</default>
+                <label>DRONE</label>
+            </value>
+            <value>
+                <fullName>VEGETABLE PLANT</fullName>
+                <default>false</default>
+                <label>VEGETABLE PLANT</label>
+            </value>
+            <value>
+                <fullName>VEGETABLE PLANTER</fullName>
+                <default>false</default>
+                <label>VEGETABLE PLANTER</label>
+            </value>
+            <value>
+                <fullName>COMBINE_HARVESTER_Resolve</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>COMBINE HARVESTER (Resolve)</label>
+            </value>
+            <value>
+                <fullName>DRONE_Resolve</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>DRONE (Resolve)</label>
+            </value>
+            <value>
+                <fullName>MINI_EXCAVATOR_Resolve</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MINI EXCAVATOR (Resolve)</label>
+            </value>
+            <value>
+                <fullName>RICE_TRANSPLANTER_Resolve</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>RICE TRANSPLANTER (Resolve)</label>
+            </value>
+            <value>
+                <fullName>SUGARCANE_HARVESTER_Resolve</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SUGARCANE HARVESTER (Resolve)</label>
+            </value>
+            <value>
+                <fullName>TRACTOR_Resolve</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TRACTOR (Resolve)</label>
+            </value>
+            <value>
+                <fullName>VEGATABLE_PLANT_Resolve</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>VEGATABLE PLANT (Resolve)</label>
+            </value>
+            <value>
+                <fullName>WelcomeCall_Oversea</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WelcomeCall Oversea</label>
+            </value>
+            <value>
+                <fullName>WelcomeCall_Oversea_Resolve</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WelcomeCall Oversea (Resolve)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

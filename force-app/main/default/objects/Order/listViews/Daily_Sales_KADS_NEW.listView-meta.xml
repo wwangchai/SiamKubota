@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Daily_Sales_KADS_NEW</fullName>
+    <booleanFilter>1 AND (2 AND (3 OR 4))</booleanFilter>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>SF_Auto_No__c</columns>
+    <columns>DBM_Order__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>Product__c</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Chassis_Implement_Serial_Number__c</columns>
+    <columns>Engine_Code__c</columns>
+    <columns>Branch_Plant_Code__c</columns>
+    <columns>Is_Duplicate__c</columns>
+    <columns>ORDERS.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ORDER.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Order.Daily_Sales</value>
+    </filters>
+    <filters>
+        <field>ORDERS.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>LAST_N_DAYS:1</value>
+    </filters>
+    <filters>
+        <field>LANDTX__c</field>
+        <operation>equals</operation>
+        <value>TH</value>
+    </filters>
+    <filters>
+        <field>LANDTX__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Daily Sales: รายการ KADS เข้าใหม่</label>
+    <sharedTo>
+        <role>CRM</role>
+        <roleAndSubordinatesInternal>Domestic</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>TS</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

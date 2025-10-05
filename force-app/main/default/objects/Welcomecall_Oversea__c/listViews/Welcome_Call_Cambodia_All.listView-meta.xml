@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Welcome_Call_Cambodia_All</fullName>
+    <columns>NAME</columns>
+    <columns>Date_of_Purchase__c</columns>
+    <columns>Customer__c</columns>
+    <columns>Number_of_owned_car__c</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Province_ID__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Contact_Status__c</columns>
+    <columns>Welcome_Call_Type__c</columns>
+    <columns>Reason_for_not_being_contacted__c</columns>
+    <columns>Date_of_Call__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Country__c</field>
+        <operation>equals</operation>
+        <value>KH</value>
+    </filters>
+    <filters>
+        <field>Contact_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Can&apos;t Contact,Contacted,Canceled</value>
+    </filters>
+    <label>Welcome Call Cambodia [All]</label>
+    <sharedTo>
+        <group>User_Iyhou_C</group>
+        <group>User_Molika_O</group>
+        <group>User_Sokha_S</group>
+    </sharedTo>
+</ListView>

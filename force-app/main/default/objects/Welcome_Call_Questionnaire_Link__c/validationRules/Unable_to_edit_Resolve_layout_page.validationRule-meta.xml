@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unable_to_edit_Resolve_layout_page</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(CONTAINS(Welcome_Call__r.RecordType.Name, &quot;Resolve&quot;), OR(ISNEW(), ISCHANGED(Answer_Value__c)))</errorConditionFormula>
+    <errorMessage>Unable to add or edit value at questionnaire section</errorMessage>
+</ValidationRule>

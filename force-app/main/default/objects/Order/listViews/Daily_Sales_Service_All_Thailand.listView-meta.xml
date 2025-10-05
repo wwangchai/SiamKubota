@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Daily_Sales_Service_All_Thailand</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>SF_Auto_No__c</columns>
+    <columns>DBMVBELN__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>Branch_Plant_Code__c</columns>
+    <columns>ORDERS.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ORDER.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Order.Daily_Sales_Service</value>
+    </filters>
+    <filters>
+        <field>LANDTX__c</field>
+        <operation>equals</operation>
+        <value>TH</value>
+    </filters>
+    <label>Daily Sales (Service): All Thailand</label>
+</ListView>

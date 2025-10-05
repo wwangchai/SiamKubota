@@ -1,0 +1,114 @@
+<template>
+    <template if:true={hasQuestions}>
+        <div style="border-width: var(--slds-c-card-sizing-border, 1px); border-style: solid;">
+            <div class="slds-col slds-size_1-of-1 slds-p-around_medium slds-text-align_center">
+                <lightning-button variant="brand" label="Save" onclick={handleSave} disabled={isResolve}></lightning-button>
+            </div>
+
+            <template for:each={groupedSections} for:item="section">
+                <div key={section.sectionName} class="slds-size_1-of-1 slds-p-around_medium">
+                    <label
+                        style="width: 100%; height: 32px; background-color: #f3f3f3; padding: 6px; margin:10px 0px 12px 0px; border-radius:6px; font-weight: bold; display:block;">
+                        {section.sectionName}
+                    </label>
+
+                    <div class="slds-grid slds-wrap">
+                        <template for:each={section.questions} for:item="question" for:index="index">
+                            <!-- <template if:true={question.colClass}>
+                                <div key={question.id}
+                                    class='slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-p-around_small'>
+                                    <div class="slds-form-element"></div>
+                                </div>
+                            </template> -->
+                            <div key={question.id}
+                                class='slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-p-around_small'>
+                                <div class="slds-form-element">
+                                    <template if:false={question.isPicklist}>
+                                        <template if:false={question.isDate}>
+                                            <template if:false={question.isDateTime}>
+                                                <label class="slds-form-element__label">{question.label}</label>
+                                            </template>
+                                        </template>
+                                    </template>
+                                    <div class="slds-form-element__control">
+
+                                        <!-- Picklist -->
+                                        <template if:true={question.isPicklist}>
+                                            <lightning-combobox name="picklist" value={question.answerValue}
+                                                options={question.picklistOptions} data-id={question.id}
+                                                label={question.label} onchange={handleSingleSelectChange}
+                                                disabled={question.disble}>
+                                            </lightning-combobox>
+                                        </template>
+
+                                        <!-- Multi Picklist -->
+                                        <template if:true={question.isMultiPicklist}>
+                                            <lightning-dual-listbox name="multiPicklist" source-label="Available"
+                                                selected-label="Chosen" options={question.picklistOptions}
+                                                value={question.answerValue} data-id={question.id}
+                                                onchange={handleMultiSelectChange} disabled={question.disble}>
+                                            </lightning-dual-listbox>
+                                        </template>
+
+                                        <!-- Text -->
+                                        <template if:true={question.isText}>
+                                            <input type="text" class="slds-input" data-id={question.id}
+                                                value={question.answerValue} onchange={handleTextChange}
+                                                disabled={question.disble} />
+                                        </template>
+
+                                        <!-- Number -->
+                                        <template if:true={question.isNumber}>
+                                            <input type="number" class="slds-input" data-id={question.id}
+                                                value={question.answerValue} onchange={handleNumberChange}
+                                                disabled={question.disble} />
+                                        </template>
+
+                                        <!-- Date -->
+                                        <template if:true={question.isDate}>
+                                            <lightning-input type="date" data-id={question.id} label={question.label}
+                                                value={question.answerValue} onchange={handleDateChange}
+                                                disabled={question.disble}>
+                                            </lightning-input>
+                                        </template>
+
+                                        <!-- Datetime -->
+                                        <template if:true={question.isDateTime}>
+                                            <lightning-input type="datetime-local" data-id={question.id}
+                                                label={question.label} value={question.answerValue}
+                                                onchange={handleDateTimeChange} disabled={question.disble}>
+                                            </lightning-input>
+                                        </template>
+
+                                        <!-- URL -->
+                                        <template if:true={question.isURL}>
+                                            <input type="url" class="slds-input" data-id={question.id}
+                                                value={question.answerValue} onchange={handleURLChange}
+                                                placeholder="https://example.com" disabled={question.disble} />
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                            <template if:true={question.colClass}>
+                                <div key={question.id}
+                                    class='slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-p-around_small'>
+                                    <div class="slds-form-element"></div>
+                                </div>
+                            </template>
+                        </template>
+                    </div>
+                </div>
+            </template>
+
+            <div class="slds-col slds-size_1-of-1 slds-p-around_medium slds-text-align_center">
+                    <lightning-button variant="brand" label="Save" onclick={handleSave} disabled={isResolve}></lightning-button>
+            </div>
+        </div>
+    </template>
+
+    <template if:false={hasQuestions}>
+        <p class="slds-text-color_error slds-p-around_medium slds-text-align_center">
+            ไม่สามารถแสดงคำถาม กรุณาติดต่อ Admin / Unable to find questionaire, please contact admin.
+        </p>
+    </template>
+</template>

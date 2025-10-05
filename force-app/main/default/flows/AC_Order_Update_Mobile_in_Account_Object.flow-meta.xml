@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Assigned_Mobile_Number</name>
+        <label>Assigned Mobile Number</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>MobileNumber</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Mobile_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Mobile_no1_in_Account</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assigned_Mobile_Number2</name>
+        <label>Assigned Mobile Number</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>MobileNumber</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Mobile_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Mobile_no1_in_Account</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Mobile_ID_and_Mobile_SRV</name>
+        <label>Check Mobile ID and Mobile SRV</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Mobile_ID</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Mobile_ID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assigned_Mobile_Number</targetReference>
+            </connector>
+            <label>Check Mobile ID</label>
+        </rules>
+        <rules>
+            <name>Check_Mobile_SRV</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Mobile_Srv__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assigned_Mobile_Number2</targetReference>
+            </connector>
+            <label>Check Mobile SRV</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Mobile_no1_from_Account</name>
+        <label>Check Mobile no1 from Account</label>
+        <locationX>578</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Kubota_Id__r.Mobile_phone_no_1__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Mobile_ID_and_Mobile_SRV</targetReference>
+            </connector>
+            <label>If Null</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>[AC] Order: Update Mobile in Account Object {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[AC] Order: Update Mobile in Account Object</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Mobile_no1_in_Account</name>
+        <label>Update Mobile no1 in Account</label>
+        <locationX>314</locationX>
+        <locationY>731</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Kubota_Id__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Mobile_phone_no_1__c</field>
+            <value>
+                <elementReference>MobileNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>452</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Mobile_no1_from_Account</targetReference>
+        </connector>
+        <object>OrderItem</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>MobileNumber</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

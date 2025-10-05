@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Daily_Sales_Service</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Order_Compact</compactLayoutAssignment>
+    <label>Daily Sales (Service)</label>
+    <picklistValues>
+        <picklist>Is_Duplicate__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Type__c</picklist>
+        <values>
+            <fullName>COMBINE HARVESTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIESEL ENGINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DRONE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DRONE IMPLEMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMPLEMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MINI EXCAVATOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mini Mower</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NON SKC IMPLEMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power Tiller</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RICE TRANSPLANTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUGARCANE HARVESTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRACTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VEGETABLE PLANT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VEGETABLE PLANTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHEEL LOADER</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Activated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
