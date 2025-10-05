@@ -4,14 +4,14 @@
         <dataCategoryGroup>Support_Knowledge</dataCategoryGroup>
         <visibility>ALL</visibility>
     </categoryGroupVisibilities>
-    <classAccesses>
+    <!-- <classAccesses>
         <apexClass>FormWelcomeCallQuestion</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>FormWelcomeCallQuestionTest</apexClass>
         <enabled>false</enabled>
-    </classAccesses>
+    </classAccesses> -->
     <classAccesses>
         <apexClass>OVSNotification</apexClass>
         <enabled>false</enabled>
