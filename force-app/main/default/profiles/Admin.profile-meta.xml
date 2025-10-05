@@ -1519,7 +1519,7 @@
     <layoutAssignments>
         <layout>Product2-Product Layout</layout>
     </layoutAssignments>
-    <layoutAssignments>
+    <!-- <layoutAssignments>
         <layout>WelcomeCall__c-AC POC</layout>
         <recordType>WelcomeCall__c.TRACTOR_Resolve</recordType>
     </layoutAssignments>
@@ -1585,7 +1585,7 @@
     <layoutAssignments>
         <layout>WelcomeCall__c-WelcomeCall Oversea %28READ ONLY REVISE%29</layout>
         <recordType>WelcomeCall__c.WelcomeCall_Oversea_Resolve</recordType>
-    </layoutAssignments>
+    </layoutAssignments> -->
     <layoutAssignments>
         <layout>Welcome_Call_Questionnaire_Link__c-Welcome Call Questionnaire Link Layout</layout>
     </layoutAssignments>

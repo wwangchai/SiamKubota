@@ -331,7 +331,7 @@
         <members>Dealer_Master</members>
         <members>Kubota_App_User</members>
         <members>Order_Record_Page</members>
-        <members>Welcome_Call_Default</members>
+        <!-- <members>Welcome_Call_Default</members> -->
         <name>FlexiPage</name>
     </types>
     <types>
