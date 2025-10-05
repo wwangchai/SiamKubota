@@ -2,15 +2,11 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>AutoCloud Phase 2 Implementation</fullName>
     <types>
-        <members>DealerApiUpsert</members>
-        <members>DealerAssetController</members>
         <members>FormWelcomeCallQuestion</members>
         <members>FormWelcomeCallQuestionTest</members>
         <members>OVSNotification</members>
         <members>OVSNotificationTest</members>
         <members>TestValidateFollowUp</members>
-        <members>WelcomeCallService</members>
-        <members>WelcomeCallTest</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -24,36 +20,14 @@
         <members>Welcome_Call_Questionnaire_Link__c.Questionnaire_Label_Text_Area__c</members>
         <members>Welcome_Call_Questionnaire_Link__c.Key_Long_Text_Area__c</members>
         <members>Case.Daily_Sales_Kads_Order__c</members>
-        <members>WelcomeCall__c.Kubota_App_User_Lead__c</members>
-        <members>WelcomeCall__c.Kubota_App_User__c</members>
         <members>Lead.Related_DailySales_KADs__c</members>
-        <members>WelcomeCall__c.Country__c</members>
         <members>Welcome_Call_Questionnaire_Setup__c.Country__c</members>
-        <members>WelcomeCall__c.Country_Native_SRV__c</members>
-        <members>WelcomeCall__c.Postcode_Native_SRV__c</members>
-        <members>WelcomeCall__c.Sub_District_Native_SRV__c</members>
-        <members>WelcomeCall__c.District_Native_SRV__c</members>
-        <members>WelcomeCall__c.Province_Native_SRV__c</members>
-        <members>WelcomeCall__c.Birthdate__c</members>
         <members>Lead.Mobile_ID__c</members>
         <members>Lead.Country_ID__c</members>
         <members>Lead.Village_ID__c</members>
         <members>Lead.Sub_District_ID__c</members>
         <members>Lead.District_ID__c</members>
         <members>Lead.Province_ID__c</members>
-        <members>WelcomeCall__c.Postcode_Native_SP__c</members>
-        <members>WelcomeCall__c.Welcome_Call_Type__c</members>
-        <members>WelcomeCall__c.Village_Native_ID__c</members>
-        <members>WelcomeCall__c.Country_Native_SP__c</members>
-        <members>WelcomeCall__c.Country_Native_ID__c</members>
-        <members>WelcomeCall__c.Sub_District_Native_SP__c</members>
-        <members>WelcomeCall__c.Sub_District_Native_ID__c</members>
-        <members>WelcomeCall__c.District_Native_SP__c</members>
-        <members>WelcomeCall__c.District_Native_ID__c</members>
-        <members>WelcomeCall__c.Province_Native_SP__c</members>
-        <members>WelcomeCall__c.Province_Native_ID__c</members>
-        <members>WelcomeCall__c.Product__c</members>
-        <members>WelcomeCall__c.Product_Type__c</members>
         <members>Activity.Assigned_to_Dealer_Account__c</members>
         <members>LiveChatTranscript.Lead__c</members>
         <members>Welcome_Call_Questionnaire__c.Country__c</members>
@@ -68,8 +42,6 @@
         <members>Lead.Related_Lead__c</members>
         <members>Asset.Product_Description_Diesel_Engine__c</members>
         <members>Asset.Purchase_Date__c</members>
-        <members>Temporary_Old_Dealer_New_Account_Dealer__c.New_Account_Dealer_Id__c</members>
-        <members>Temporary_Old_Dealer_New_Account_Dealer__c.Old_Dealer_Id__c</members>
         <members>Asset.Product_Code__c</members>
         <members>Asset.Dealer_Old_Id__c</members>
         <members>Asset.Home_No__c</members>
@@ -97,11 +69,7 @@
         <members>Lead.Citizen_Id__c</members>
         <members>OrderItem.Temporary_Key__c</members>
         <members>Asset.Daily_Sales_Kads_Order__c</members>
-        <members>WelcomeCall__c.Daily_Sales_Kads_Order__c</members>
         <members>Welcomecall_Oversea__c.Dealer_Name_Account__c</members>
-        <members>WelcomeCall__c.Due_Date__c</members>
-        <members>WelcomeCall__c.Date_of_Purchase__c</members>
-        <members>WelcomeCall__c.After_Sale_Service_Dealer__c</members>
         <members>Welcome_Call_Questionnaire_Link__c.Answer_Value_All__c</members>
         <members>Account.Dealer_Code_Master__c</members>
         <members>OrderItem.TOTAL_PRICE__c</members>
@@ -116,11 +84,8 @@
         <members>Asset.Shop_Name_Account__c</members>
         <members>Asset.After_sales_service_dealer_account__c</members>
         <members>Case.Asset_Dealer_Name_Account__c</members>
-        <members>Case.Plant_Code_Under_SSC_Account__c</members>
-        <members>Case.Complain_Dealer_Account__c</members>
         <members>OrderItem.Daily_Sales_Type__c</members>
         <members>OrderItem.NET_VALUE__c</members>
-        <members>WelcomeCall__c.Dealer_Name_Account__c</members>
         <members>Order.Original_Shop_Name_Id__c</members>
         <members>Order.Customer_number__c</members>
         <members>Order.Kubota_Id__c</members>
@@ -375,7 +340,6 @@
     <types>
         <members>AC_Account_Dealer_Populate_Shop_Name</members>
         <members>AC_Asset_Migrate_Shop_Name_Account_1_Time_Run</members>
-        <members>AC_Asset_Populate_Product_and_Account_Dealer_on_Creation</members>
         <members>AC_Daily_Sales_Part_Schedule_Delete</members>
         <members>AC_Daily_Sales_Schedule_Delete</members>
         <members>AC_Daily_Sales_Service_Schedule_Delete</members>
@@ -554,7 +518,6 @@
     <types>
         <members>Account.Dealer_Master</members>
         <members>Account.SKC_Default</members>
-        <members>Lead.Kubota_App_User</members>
         <members>Order.Daily_Sales</members>
         <members>Order.Daily_Sales_Part</members>
         <members>Order.Daily_Sales_Service</members>
@@ -599,13 +562,10 @@
         <members>OVS_CRM_KUBOTA_APP/Kubota_app_user_report_Hi0</members>
         <members>OVS_CRM_KUBOTA_APP/Kubota_app_user_report_check_address</members>
         <members>OVS_CRM_KUBOTA_APP/Kubota_app_user_report_jZu</members>
-        <members>OVS_CRM_KUBOTA_APP/Kubota_application_lead_uuB</members>
         <members>OVS_CRM_KUBOTA_APP/Kubota_application_result_and_AD_New_9pn</members>
-        <members>OVS_CRM_KUBOTA_APP/MTP_KUBOTA_APP_New_Ppl</members>
         <members>OVS_CRM_KUBOTA_APP/New_Kubota_App_User_Report_all_2024N_Oqz</members>
         <members>OVS_CRM_KUBOTA_APP/Salesforce_problem_New_24T</members>
         <members>OVS_CRM_KUBOTA_APP/X4Kubota_app_user_report_31May2024New_tVd</members>
-        <members>TSReport/TS_Report_1747/X1747_New_hBN</members>
         <members>Welcome_Call/New_Welcome_Call_with_Customer_Report_dyJ</members>
         <name>Report</name>
     </types>
@@ -614,7 +574,6 @@
         <members>Account_with_Order</members>
         <members>Account_with_Order_and_Order_Item_Daily_Sales</members>
         <members>Daily_Sales_KADS_with_Kubota_app_user</members>
-        <members>Kubota_App_User_Lead_with_Related_Lead</members>
         <members>Kubota_App_User_With_Lead_and_Account</members>
         <members>Kubota_app_user_Lead_related_Welcome_call_oversea</members>
         <members>Lead</members>
