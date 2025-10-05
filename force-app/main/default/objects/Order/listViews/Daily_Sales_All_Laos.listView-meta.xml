@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Daily_Sales_All_Laos</fullName>
+    <columns>ORDERS.LAST_UPDATE</columns>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>SF_Auto_No__c</columns>
+    <columns>DBM_Order__c</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Chassis_Implement_Serial_Number__c</columns>
+    <columns>Engine_Code__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>Product__c</columns>
+    <columns>Branch_Plant_Code__c</columns>
+    <columns>Payment_Method__c</columns>
+    <columns>Is_Duplicate__c</columns>
+    <columns>ORDERS.CREATED_DATE</columns>
+    <columns>LANDTX__c</columns>
+    <columns>ID_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LANDTX__c</field>
+        <operation>equals</operation>
+        <value>LA</value>
+    </filters>
+    <filters>
+        <field>ORDER.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Order.Daily_Sales</value>
+    </filters>
+    <label>Daily Sales: All Laos</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CRM_Manager_Laos</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

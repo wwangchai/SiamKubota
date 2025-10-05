@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Daily_Sales_KADS_DUP</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>SF_Auto_No__c</columns>
+    <columns>DBM_Order__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>Product__c</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Engine_Code__c</columns>
+    <columns>Branch_Plant_Code__c</columns>
+    <columns>Is_Duplicate__c</columns>
+    <columns>ORDERS.CREATED_DATE</columns>
+    <columns>Grade__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ORDER.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Order.Daily_Sales</value>
+    </filters>
+    <filters>
+        <field>Is_Duplicate__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <label>Daily Sales: รายการ KADS เข้าซ้ำ</label>
+    <sharedTo>
+        <role>CRM</role>
+        <roleAndSubordinatesInternal>Domestic</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>TS</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

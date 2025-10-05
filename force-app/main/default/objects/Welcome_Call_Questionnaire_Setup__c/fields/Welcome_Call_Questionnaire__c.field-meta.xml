@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Welcome_Call_Questionnaire__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Welcome Call Questionnaire</label>
+    <referenceTo>Welcome_Call_Questionnaire__c</referenceTo>
+    <relationshipLabel>Welcome Call Questionnaire Setup</relationshipLabel>
+    <relationshipName>Welcome_Call_Questionnaire_Setup</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
