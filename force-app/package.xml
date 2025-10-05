@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>AutoCloud Phase 2 Implementation</fullName>
-    <types>
-        <!-- <members>FormWelcomeCallQuestion</members>
-        <members>FormWelcomeCallQuestionTest</members> -->
-        <members>OVSNotification</members>
-        <members>OVSNotificationTest</members>
-        <members>TestValidateFollowUp</members>
+    <!-- <types>
+        <members>FormWelcomeCallQuestion</members>
+        <members>FormWelcomeCallQuestionTest</members>
         <name>ApexClass</name>
-    </types>
+    </types> -->
     <types>
         <members>AccountUpdateTrigger</members>
         <members>UpdateKISNumber</members>
@@ -374,8 +371,8 @@
     <types>
         <members>Account-Dealer Master</members>
         <members>Asset-Asset Layout</members>
-        <members>Kubota_App_User__c-KubotaAppUser Layout</members>
-        <members>Lead-Kubota App User</members>
+        <!-- <members>Kubota_App_User__c-KubotaAppUser Layout</members>
+        <members>Lead-Kubota App User</members> -->
         <members>Lead-Lead Layout</members>
         <members>Lead-New CRM Lead</members>
         <members>Lead-New CRM Lead Oversea</members>
@@ -385,7 +382,7 @@
         <members>Order-Daily Sales %28Service%29</members>
         <members>Order-Order Layout</members>
         <members>OrderItem-Order Product Layout</members>
-        <members>WelcomeCall__c-AC POC</members>
+        <!-- <members>WelcomeCall__c-AC POC</members>
         <members>WelcomeCall__c-COMBINE HARVESTER</members>
         <members>WelcomeCall__c-COMBINE HARVESTER %28READ ONLY Revise%231%29</members>
         <members>WelcomeCall__c-COMBINE HARVESTER %28READ ONLY Revise%232%29</members>
@@ -427,7 +424,7 @@
         <members>WelcomeCall__c-WelcomeCall Layout</members>
         <members>WelcomeCall__c-WelcomeCall Oversea</members>
         <members>WelcomeCall__c-WelcomeCall Oversea %28READ ONLY REVISE%29</members>
-        <members>WelcomeCall__c-WelcomeCall Oversea %28Read Only%29</members>
+        <members>WelcomeCall__c-WelcomeCall Oversea %28Read Only%29</members> -->
         <members>Welcome_Call_Questionnaire_Link__c-Welcome Call Questionnaire Link Layout</members>
         <members>Welcome_Call_Questionnaire_Setup__c-Welcome Call Questionnaire Setup Layout</members>
         <members>Welcome_Call_Questionnaire__c-Welcome Call Questionnaire Layout</members>
@@ -470,14 +467,14 @@
         <members>Order.Daily_Sales_Service_All_Thailand</members>
         <members>Order.Daily_Sales_Service_OVS</members>
         <members>Order.Daily_Salse_Service_All</members>
-        <members>WelcomeCall__c.WelcomeCallOversea_Cambodia_Repurchase</members>
+        <!-- <members>WelcomeCall__c.WelcomeCallOversea_Cambodia_Repurchase</members>
         <members>WelcomeCall__c.Welcome_Call_Oversea_Cambodia_All</members>
         <members>WelcomeCall__c.Welcome_Call_Oversea_Cambodia_Complete</members>
         <members>WelcomeCall__c.Welcome_Call_Oversea_Cambodia_New</members>
         <members>WelcomeCall__c.Welcome_Call_Oversea_Laos</members>
         <members>WelcomeCall__c.Welcome_Call_Oversea_Laos_all</members>
         <members>WelcomeCall__c.Welcome_Call_Oversea_Laos_finish</members>
-        <members>WelcomeCall__c.Welcome_Call_Oversea_Laos_work</members>
+        <members>WelcomeCall__c.Welcome_Call_Oversea_Laos_work</members> -->
         <members>Welcome_Call_Questionnaire_Setup__c.All</members>
         <members>Welcome_Call_Questionnaire_Setup__c.COMBINE_HARVESTER</members>
         <members>Welcome_Call_Questionnaire_Setup__c.COMBINE_HARVESTER_KH</members>
@@ -571,7 +568,7 @@
         <members>Daily_Sales_KADS_with_Kubota_app_user</members>
         <members>Kubota_App_User_With_Lead_and_Account</members>
         <members>Lead</members>
-        <members>Welcome_Call_Question_Answer</members>
+        <!-- <members>Welcome_Call_Question_Answer</members> -->
         <name>ReportType</name>
     </types>
     <types>
