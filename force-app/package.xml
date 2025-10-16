@@ -38,8 +38,6 @@
         <members>Account.Dealer_Code_Master__c</members>
         <members>Account.Dealer_Name__c</members>
         <members>Case.Asset_Dealer_Name_Account__c</members>
-        <members>Case.Plant_Code_Under_SSC_Account__c</members>
-        <members>Case.Complain_Dealer_Account__c</members>
         <members>WelcomeCall__c.Dealer_Name_Account__c</members>   
         <name>CustomField</name>   
     </types>
