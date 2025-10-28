@@ -17,9 +17,522 @@
             <targetReference>Get_Dealer_from_Account</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>Revise_Order_Data</name>
+        <label>Revise Order Data</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>GetOrder.AD_DISC__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.AD_DISC__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Kubota_Id__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Address_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Address_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Address_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Address_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Birth_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Birth_Date__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Building_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Building_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Building_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Building_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.CPOINT__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.CPOINT__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.CUR_OWNER__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.CUR_OWNER__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Chassis_Implement_Serial_Number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Chassis_Implement_Serial_Number__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Consent__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Consent__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Customer_number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Customer_number__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.DBM_Order__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.DBM_Order__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.DOWN_PAY__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.DOWN_PAY__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.District_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.District_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.District_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.District_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.EffectiveDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Sale_Date__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Engine_Code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Engine_Code__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.First_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.First_Name__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Floor_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Floor_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Floor_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Floor_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Grade__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Grade__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.ID_Number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ID_Number__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Is_Duplicate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.IS_Duplicate__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Is_Owner_Change__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Is_Owner_Change__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Is_second_hand__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Is_second_hand__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.KIS_Number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.KIS_Number__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.KIS_Password__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.KIS_Password__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.KIS_Username__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.KIS_Username__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.KubotaId__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.KubotaId__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.LANDTX__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.LANDTX__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Last_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Last_Name__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.MATNR__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.MATNR__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Mobile_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Mobile_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Mobile_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Mobile_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Moo_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Moo_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Moo_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Moo_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.NET_VALUE__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.NET_VALUE__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Number_of_Welcome_Call_record__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Number_of_Welcome_Call_record__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Original_Daily_Sales_SF_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Payment_Method__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Payment_Method__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Payment_method_code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Payment_method_code__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Postcode_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Postcode_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Postcode_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Postcode_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Product_Description__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Product_Description__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Product_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Product_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Product__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Product__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Province_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Province_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Province_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Province_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Remark__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Remark__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Room_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Room_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Room_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Room_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.SKC_DISC__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SKC_DISC__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Sales_Organization__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Sales_Organization__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Soi_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Soi_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Soi_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Soi_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Source__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Source__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Street_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Street_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Street_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Street_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Subdistrict_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Subdistrict_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Subdistrict_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Subdistrict_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.TOTAL_PAYDISC__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.TOTAL_PAYDISC__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.TOTAL_PRICE__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.TOTAL_PRICE__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Tel_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Tel_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Tel_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Tel_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Title__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Title__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Title_code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Title_code__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.VTWEG__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.VTWEG__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Village_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Village_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetOrder.Village_Srv__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Village_Srv__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+    </assignments>
     <decisions>
-        <name>Decision_1</name>
-        <label>CheckOrderDup</label>
+        <name>Check_Existing_Order</name>
+        <label>Check Existing Order</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
@@ -27,7 +540,7 @@
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>IsDuplicate</name>
+            <name>Found_Existing_Order</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>GetOrder.DBM_Order__c</leftValueReference>
@@ -36,7 +549,68 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
-            <label>IsDuplicate</label>
+            <connector>
+                <targetReference>Validate_Daily_Sales_Product_Type</targetReference>
+            </connector>
+            <label>Found Existing Order</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Validate_Daily_Sales_Product_Type</name>
+        <label>Validate Daily Sales Product Type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Validate_Existing_Order_Product_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not IMPLEMENT and KIS</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_IMPLEMENT_or_KIS</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>IMPLEMENT</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>KIS</stringValue>
+                </rightValue>
+            </conditions>
+            <label>IMPLEMENT or KIS</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Validate_Existing_Order_Product_Type</name>
+        <label>Validate Existing Order Product Type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IMPLEMENT_or_KIS_Order</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>GetOrder.Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>IMPLEMENT</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>GetOrder.Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>KIS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Revise_Order_Data</targetReference>
+            </connector>
+            <label>IMPLEMENT or KIS</label>
         </rules>
     </decisions>
     <decisions>
@@ -102,8 +676,8 @@
         <dataType>Date</dataType>
         <expression>TODAY()-1</expression>
     </formulas>
-    <interviewLabel>[AC] Order: Schedule Create Order From Data Loader {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>[AC] Order: Schedule Create Order From Data Loader</label>
+    <interviewLabel>[AC] Order: Schedule Revise Order From Data Loader (6pm) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[AC] Order: Schedule Revise Order From Data Loader (6pm)</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -128,9 +702,6 @@
         <label>AddOrderData</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <faultConnector>
-            <targetReference>Create_a_Service_Log</targetReference>
-        </faultConnector>
         <inputAssignments>
             <field>AD_DISC__c</field>
             <value>
@@ -578,32 +1149,6 @@
         <object>Order</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
-    <recordCreates>
-        <name>Create_a_Service_Log</name>
-        <label>Create a Service Log</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <inputAssignments>
-            <field>API_Name__c</field>
-            <value>
-                <stringValue>[AC] Order: Schedule Create Order From Data Loader</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Request__c</field>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Response__c</field>
-            <value>
-                <elementReference>$Flow.FaultMessage</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Service_Log__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
     <recordLookups>
         <name>Get_Dealer_from_Account</name>
         <label>Get Dealer from Account</label>
@@ -705,7 +1250,7 @@
         <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Decision_1</targetReference>
+            <targetReference>Check_Existing_Order</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -719,6 +1264,13 @@
         <object>Order</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>Update_Order</name>
+        <label>Update Order</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>GetOrder</inputReference>
+    </recordUpdates>
     <start>
         <locationX>0</locationX>
         <locationY>0</locationY>
@@ -736,8 +1288,8 @@
         <object>Daily_Sales_Kads__c</object>
         <schedule>
             <frequency>Daily</frequency>
-            <startDate>2025-10-21</startDate>
-            <startTime>12:45:00.000Z</startTime>
+            <startDate>2025-10-29</startDate>
+            <startTime>18:00:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
