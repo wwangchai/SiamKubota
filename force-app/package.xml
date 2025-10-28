@@ -1,88 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>AutoCloud Phase 2 Implementation - Welcome Call</fullName>
+    <fullName>AutoCloud Phase 2 Implementation - Order Flow</fullName>
     <types>
-        <members>FormWelcomeCallQuestion</members>
-        <members>FormWelcomeCallQuestionTest</members>
-        <name>ApexClass</name>
+        <members>AC_OrderProduct_Schedule_Create_OrderProduct_From_Data_Loader</members>
+        <members>AC_OrderProduct_Schedule_Create_OrderProduct_From_Data_Loader_11_45pm</members>
+        <members>AC_OrderProduct_Schedule_Create_OrderProduct_From_Data_Loader_12pm</members>
+        <members>AC_OrderProduct_Schedule_Create_OrderProduct_From_Data_Loader_3pm</members>
+        <members>AC_OrderProduct_Schedule_Create_OrderProduct_From_Data_Loader_6pm</members>
+        <members>AC_OrderProduct_Schedule_Create_OrderProduct_From_Data_Loader_9am</members>
+        <members>AC_OrderProduct_Schedule_Create_OrderProduct_From_Data_Loader_9pm</members>
+        <members>AC_Order_Create_WelcomeCall_Asset</members>
+        <members>AC_Order_Schedule_Create_Order_From_Data_Loader</members>
+        <members>AC_Order_Schedule_Create_Order_From_Data_Loader_Daily_Sales_Part</members>
+        <members>AC_Order_Schedule_Create_Order_From_Data_Loader_Daily_Sales_Service</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_10am</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_10pm</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_11_45pm</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_11am</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_12pm</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_1pm</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_2pm</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_3pm</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_4pm</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_5pm</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_6pm</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_7am</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_7pm</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_8am</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_8pm</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_9am</members>
+        <members>AC_Order_Schedule_Revise_Order_From_Data_Loader_9pm</members>
+        <members>OrderProduct_Schedule_Create_OrderProduct_From_Data_Loader_Daily_Sales_Part</members>
+        <members>OrderProduct_Schedule_Create_OrderProduct_From_Data_Loader_Daily_Sales_Service</members>
+        <name>Flow</name>
     </types>
-    <types>
-        <members>Account.Original_Dealer_SF_ID__c</members>
-        <members>Case.Daily_Sales_Kads_Order__c</members>
-        <members>WelcomeCall__c.Kubota_App_User_Lead__c</members>
-        <members>WelcomeCall__c.Kubota_App_User__c</members>
-        <members>WelcomeCall__c.Country__c</members>
-        <members>WelcomeCall__c.Country_Native_SRV__c</members>
-        <members>WelcomeCall__c.Postcode_Native_SRV__c</members>
-        <members>WelcomeCall__c.Sub_District_Native_SRV__c</members>
-        <members>WelcomeCall__c.District_Native_SRV__c</members>
-        <members>WelcomeCall__c.Province_Native_SRV__c</members>
-        <members>WelcomeCall__c.Birthdate__c</members>
-        <members>WelcomeCall__c.Postcode_Native_SP__c</members>
-        <members>WelcomeCall__c.Welcome_Call_Type__c</members>
-        <members>WelcomeCall__c.Village_Native_ID__c</members>
-        <members>WelcomeCall__c.Country_Native_SP__c</members>
-        <members>WelcomeCall__c.Country_Native_ID__c</members>
-        <members>WelcomeCall__c.Sub_District_Native_SP__c</members>
-        <members>WelcomeCall__c.Sub_District_Native_ID__c</members>
-        <members>WelcomeCall__c.District_Native_SP__c</members>
-        <members>WelcomeCall__c.District_Native_ID__c</members>
-        <members>WelcomeCall__c.Province_Native_SP__c</members>
-        <members>WelcomeCall__c.Province_Native_ID__c</members>
-        <members>WelcomeCall__c.Product__c</members>
-        <members>WelcomeCall__c.Product_Type__c</members>
-        <members>WelcomeCall__c.Daily_Sales_Kads_Order__c</members>
-        <members>WelcomeCall__c.Due_Date__c</members>
-        <members>WelcomeCall__c.Date_of_Purchase__c</members>
-        <members>WelcomeCall__c.After_Sale_Service_Dealer__c</members>
-        <members>Account.Dealer_Code_Master__c</members>
-        <members>Account.Dealer_Name__c</members>
-        <members>Case.Asset_Dealer_Name_Account__c</members>
-        <members>WelcomeCall__c.Dealer_Name_Account__c</members>   
-        <name>CustomField</name>   
-    </types>
-    <types>
-        <members>Welcome_Call_Default</members>
-        <name>FlexiPage</name>
-    </types>
-    <types>
-        <members>WelcomeCall__c-WelcomeCall Oversea</members>
-        <members>WelcomeCall__c-WelcomeCall Oversea %28READ ONLY REVISE%29</members>
-        <members>WelcomeCall__c-WelcomeCall Oversea %28Read Only%29</members>
-        <name>Layout</name>
-    </types>
-    <types>
-        <members>welcomeCallForm</members>
-        <name>LightningComponentBundle</name>
-    </types>
-    <types>
-        <members>WelcomeCall__c.All_Oversea</members>
-        <members>WelcomeCall__c.WelcomeCallOversea_Cambodia_Repurchase</members>
-        <members>WelcomeCall__c.Welcome_Call_Oversea_Cambodia_All</members>
-        <members>WelcomeCall__c.Welcome_Call_Oversea_Cambodia_Complete</members>
-        <members>WelcomeCall__c.Welcome_Call_Oversea_Cambodia_New</members>
-        <members>WelcomeCall__c.Welcome_Call_Oversea_Laos</members>
-        <members>WelcomeCall__c.Welcome_Call_Oversea_Laos_all</members>
-        <members>WelcomeCall__c.Welcome_Call_Oversea_Laos_finish</members>
-        <members>WelcomeCall__c.Welcome_Call_Oversea_Laos_work</members>
-        <name>ListView</name>
-    </types>
-    <types>
-        <members>Admin</members>
-        <members>CRM In Bound-Out Bound Agent Oversea</members>
-        <members>CRM Inbound Agent</members>
-        <members>CRM Manager Domestic and Oversea</members>
-        <members>CRM Outbound Agent</members>
-        <members>CRM Supervisor and Manager</members>
-        <members>CRM Supervisor and Manager Oversea</members>
-        <members>TS Agent</members>
-        <members>TS Supervisor and Manager</members>
-        <name>Profile</name>
-    </types>
-    <types>
-        <members>WelcomeCall__c.WelcomeCall_Oversea</members>
-        <members>WelcomeCall__c.WelcomeCall_Oversea_Resolve</members>
-        <name>RecordType</name>
-    </types>
-    <version>60.0</version>
+    <version>62.0</version>
 </Package>

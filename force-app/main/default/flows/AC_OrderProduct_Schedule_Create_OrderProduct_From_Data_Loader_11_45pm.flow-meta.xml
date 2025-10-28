@@ -54,8 +54,8 @@
         <dataType>Date</dataType>
         <expression>TODAY()-1</expression>
     </formulas>
-    <interviewLabel>[AC] OrderProduct: Schedule Create OrderProduct From Data Loader {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>[AC] OrderProduct: Schedule Create OrderProduct From Data Loader</label>
+    <interviewLabel>[AC] OrderProduct: Schedule Create OrderProduct From Data Loader (11:45pm) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[AC] OrderProduct: Schedule Create OrderProduct From Data Loader (11:45pm)</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -644,8 +644,8 @@
         <object>Daily_Sales_Kads__c</object>
         <schedule>
             <frequency>Daily</frequency>
-            <startDate>2025-10-21</startDate>
-            <startTime>13:30:00.000Z</startTime>
+            <startDate>2025-10-29</startDate>
+            <startTime>23:45:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>

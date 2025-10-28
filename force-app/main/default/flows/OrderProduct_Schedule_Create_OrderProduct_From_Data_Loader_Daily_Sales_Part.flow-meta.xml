@@ -1,50 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>64.0</apiVersion>
-    <decisions>
-        <name>CheckOrderProductDup</name>
-        <label>CheckOrderProductDup</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>GetOrderId</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>IsDuplicate</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>GetOrderProductForcheckDup.DBM_Order__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <label>IsDuplicate</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>ValidateDate</name>
-        <label>ValidateDate</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>YeaterDay</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.CreatedDate</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>Yesterday</elementReference>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>GetOrderProductForcheckDup</targetReference>
-            </connector>
-            <label>YesterDay</label>
-        </rules>
-    </decisions>
     <environments>Default</environments>
     <formulas>
         <name>Yesterday</name>
@@ -140,7 +96,7 @@
         <inputAssignments>
             <field>Daily_Sales_Type__c</field>
             <value>
-                <stringValue>Service</stringValue>
+                <stringValue>Part</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -218,7 +174,7 @@
         <inputAssignments>
             <field>OrderId</field>
             <value>
-                <elementReference>GetOrderId.OriginalOrderId</elementReference>
+                <elementReference>GetOrderId.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -242,7 +198,13 @@
         <inputAssignments>
             <field>PricebookEntryId</field>
             <value>
-                <stringValue>01uBK000001IJiVYAW</stringValue>
+                <elementReference>Get_Dummy_Pricebook_Entry.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Quantity</field>
+            <value>
+                <numberValue>1.0</numberValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -405,6 +367,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>UnitPrice</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>VBELN__c</field>
             <value>
                 <elementReference>$Record.VBELN__c</elementReference>
@@ -426,13 +394,34 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
+        <name>Get_Dummy_Pricebook_Entry</name>
+        <label>Get Dummy Pricebook Entry</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CreateOrderProduct</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Dummy Interested Product</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>PricebookEntry</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>GetOrderId</name>
         <label>GetOrderId</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>CreateOrderProduct</targetReference>
+            <targetReference>Get_Dummy_Pricebook_Entry</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -446,40 +435,34 @@
         <object>Order</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordLookups>
-        <name>GetOrderProductForcheckDup</name>
-        <label>GetOrderProductForcheckDup</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>CheckOrderProductDup</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>DBM_Order__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.DBMVBELN__c</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>OrderItem</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
     <start>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>ValidateDate</targetReference>
+            <targetReference>GetOrderId</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsCreatedToday__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Kubota_Id__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
         <object>Daily_Sales_Part__c</object>
         <schedule>
             <frequency>Daily</frequency>
-            <startDate>2025-07-25</startDate>
-            <startTime>00:30:00.000Z</startTime>
+            <startDate>2025-10-14</startDate>
+            <startTime>09:15:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
 </Flow>

@@ -7,7 +7,7 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>AddOrderData</targetReference>
+            <targetReference>Get_Record_Type_Daily_Sales_Service</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -21,28 +21,6 @@
                 </rightValue>
             </conditions>
             <label>IsDuplicate</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>ValidateDate</name>
-        <label>ValidateDate</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Yesterday1</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.CreatedDate</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>Yesterday</elementReference>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>GetOrder</targetReference>
-            </connector>
-            <label>Yesterday1</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -108,7 +86,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>DBM_Order__c</field>
+            <field>DBMVBELN__c</field>
             <value>
                 <elementReference>$Record.DBMVBELN__c</elementReference>
             </value>
@@ -228,6 +206,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>Get_Record_Type_Daily_Sales_Service.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Room_ID__c</field>
             <value>
                 <elementReference>$Record.SRV_ROOMNO__c</elementReference>
@@ -314,6 +298,34 @@
         <object>Order</object>
     </recordCreates>
     <recordLookups>
+        <name>Get_Record_Type_Daily_Sales_Service</name>
+        <label>Get Record Type Daily Sales Service</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>AddOrderData</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Order</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Daily_Sales_Service</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>GetOrder</name>
         <label>GetOrderForCheckDup</label>
         <locationX>0</locationX>
@@ -338,17 +350,32 @@
         <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>ValidateDate</targetReference>
+            <targetReference>GetOrder</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsCreatedToday__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Kubota_Id__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
         <object>Daily_Sales_Service__c</object>
         <schedule>
             <frequency>Daily</frequency>
-            <startDate>2025-07-23</startDate>
-            <startTime>00:15:00.000Z</startTime>
+            <startDate>2025-10-14</startDate>
+            <startTime>12:00:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>recordID</name>
         <dataType>String</dataType>
