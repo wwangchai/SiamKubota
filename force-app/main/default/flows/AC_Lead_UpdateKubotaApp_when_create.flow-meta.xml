@@ -2,19 +2,29 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>58.0</apiVersion>
     <decisions>
-        <name>checkIDandPhone</name>
-        <label>checkIDandPhone</label>
-        <locationX>314</locationX>
+        <name>checkIDandCitizenId</name>
+        <label>checkIDandCitizenId</label>
+        <locationX>281</locationX>
         <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>getKubotaAppPhone</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>IfIDIsMatch</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>getKubotaApp.Citizen_Id__c</leftValueReference>
+                <leftValueReference>getKubotaAppCitizenId.Citizen_Id__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>$Record.Id_Card_No__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>getKubotaAppCitizenId.Citizen_Id__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -22,41 +32,66 @@
             </connector>
             <label>IfIDIsMatch</label>
         </rules>
+    </decisions>
+    <decisions>
+        <name>checkIDandmobilePhone</name>
+        <label>checkIDandmobilePhone</label>
+        <locationX>710</locationX>
+        <locationY>863</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>IfPhoneIsMatch</name>
-            <conditionLogic>(1 OR 2) AND (3 OR 4)</conditionLogic>
+            <name>IfIDIsMatchMobilePhone</name>
+            <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>getKubotaApp.Mobile_phone_no_1__c</leftValueReference>
+                <leftValueReference>getKubotaAppMobilePhone.Mobile_phone_no_1__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>getKubotaAppMobilePhone.Mobile_phone_no_1__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>$Record.Mobile_Phone_1__c</elementReference>
                 </rightValue>
             </conditions>
+            <connector>
+                <targetReference>updateKubotaAppRecord3</targetReference>
+            </connector>
+            <label>IfIDIsMatchMobilePhone</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>checkIDandPhone</name>
+        <label>checkIDandPhone</label>
+        <locationX>512</locationX>
+        <locationY>647</locationY>
+        <defaultConnector>
+            <targetReference>getKubotaAppMobilePhone</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>PhoneMatch</name>
+            <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>getKubotaApp.Phone</leftValueReference>
+                <leftValueReference>getKubotaAppPhone.Phone</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>$Record.Telephone__c</elementReference>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>getKubotaApp.FirstName</leftValueReference>
-                <operator>EqualTo</operator>
+                <leftValueReference>getKubotaAppPhone.Phone</leftValueReference>
+                <operator>IsNull</operator>
                 <rightValue>
-                    <elementReference>$Record.FirstName</elementReference>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>getKubotaApp.LastName</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>$Record.LastName</elementReference>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Copy_1_of_updateKubotaAppRecord</targetReference>
+                <targetReference>updateKubotaAppRecord2</targetReference>
             </connector>
-            <label>IfPhoneIsMatch</label>
+            <label>PhoneMatch</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -82,15 +117,15 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
-        <name>getKubotaApp</name>
-        <label>getKubotaApp</label>
-        <locationX>314</locationX>
+        <name>getKubotaAppCitizenId</name>
+        <label>getKubotaAppCitizenId</label>
+        <locationX>281</locationX>
         <locationY>323</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>checkIDandPhone</targetReference>
+            <targetReference>checkIDandCitizenId</targetReference>
         </connector>
-        <filterLogic>1 AND (2 OR 3 OR 4)</filterLogic>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>Record_Type_Name__c</field>
             <operator>EqualTo</operator>
@@ -106,6 +141,64 @@
             </value>
         </filters>
         <filters>
+            <field>Related_Lead__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <sortField>LastModifiedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>getKubotaAppMobilePhone</name>
+        <label>getKubotaAppMobilePhone</label>
+        <locationX>710</locationX>
+        <locationY>755</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>checkIDandmobilePhone</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Related_Lead__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Mobile_phone_no_1__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Mobile_Phone_1__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Kubota App User</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>getKubotaAppPhone</name>
+        <label>getKubotaAppPhone</label>
+        <locationX>512</locationX>
+        <locationY>539</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>checkIDandPhone</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
             <field>Phone</field>
             <operator>EqualTo</operator>
             <value>
@@ -113,37 +206,25 @@
             </value>
         </filters>
         <filters>
-            <field>Mobile_Phone_1__c</field>
+            <field>Related_Lead__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.Mobile_Phone_1__c</elementReference>
+                <stringValue>Kubota App User</stringValue>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>Lead</object>
+        <sortField>LastModifiedDate</sortField>
+        <sortOrder>Desc</sortOrder>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordUpdates>
-        <name>Copy_1_of_updateKubotaAppRecord</name>
-        <label>updateKubotaAppRecordByPhone</label>
-        <locationX>314</locationX>
-        <locationY>539</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>getKubotaApp.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Related_Lead__c</field>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Kubota_App_User__c</object>
-    </recordUpdates>
     <recordUpdates>
         <name>updateKubotaAppRecord</name>
         <label>updateKubotaAppRecord</label>
@@ -154,7 +235,7 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>getKubotaApp.Id</elementReference>
+                <elementReference>getKubotaAppCitizenId.Id</elementReference>
             </value>
         </filters>
         <inputAssignments>
@@ -163,15 +244,57 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputAssignments>
-        <object>Kubota_App_User__c</object>
+        <object>Lead</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>updateKubotaAppRecord2</name>
+        <label>updateKubotaAppRecord2</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>getKubotaAppPhone.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Related_Lead__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>updateKubotaAppRecord3</name>
+        <label>updateKubotaAppRecord3</label>
+        <locationX>578</locationX>
+        <locationY>971</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>getKubotaAppMobilePhone.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Related_Lead__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
     </recordUpdates>
     <start>
-        <locationX>188</locationX>
+        <locationX>155</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>getKubotaApp</targetReference>
+            <targetReference>getKubotaAppCitizenId</targetReference>
         </connector>
-        <filterLogic>1 AND (2 OR 3 OR 4)</filterLogic>
+        <filterLogic>1 AND (2 OR 3 OR 4) AND 5</filterLogic>
         <filters>
             <field>Activity_Code__c</field>
             <operator>EqualTo</operator>
@@ -198,6 +321,13 @@
             <operator>NotEqualTo</operator>
             <value>
                 <stringValue></stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Kubota App User</stringValue>
             </value>
         </filters>
         <object>Lead</object>

@@ -1,35 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
-        <field>Account$Kubota_Id__c</field>
+        <field>Account.Leads__r$Id</field>
     </columns>
     <columns>
-        <field>Account.Leads__r$Citizen_Id__c</field>
+        <field>Account.Leads__r$Kubota_Id__c</field>
     </columns>
     <columns>
-        <field>Account.Leads__r$Dealer_Lead_Lookup__c</field>
+        <field>Account$Citizen_Id__c</field>
     </columns>
     <columns>
-        <field>Account.Leads__r$Channel_to_know_Kubota_Application__c</field>
+        <field>Account.Leads__r$Related_Lead__c.Dealer_Lead_Lookup__c</field>
     </columns>
     <columns>
-        <field>Account.Leads__r$Dealer_Name_Questionnaire__c</field>
+        <field>Account.Leads__r$Related_Lead__c.Channel_to_know_Kubota_Application__c</field>
     </columns>
     <columns>
-        <field>Account.Leads__r$Interest_Model__c</field>
+        <field>Account.Leads__r$Related_Lead__c.Dealer_Name_Questionnaire__c</field>
     </columns>
     <columns>
-        <field>Account.Leads__r$Interest_Product__c</field>
+        <field>Account.Leads__r$Related_Lead__c.Interest_Model__c</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$Related_Lead__c.Interest_Product__c</field>
     </columns>
     <columns>
         <field>Account$Phone</field>
     </columns>
     <columns>
-        <field>Account.Leads__r$Time_to_be_customer__c</field>
+        <field>Account.Leads__r$Related_Lead__c.Time_to_be_customer__c</field>
     </columns>
     <columns>
         <field>Account$Mobile_phone_no_1__c</field>
     </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Leads__r$Record_Type_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Kubota App User</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
     <format>Tabular</format>
     <name>Kubota application result and AD [New]</name>
     <params>

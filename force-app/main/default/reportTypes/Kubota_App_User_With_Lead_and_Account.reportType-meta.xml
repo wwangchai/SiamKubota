@@ -2045,11 +2045,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Channel_to_know_Kubota_Application__c</field>
-            <table>Account.Leads__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Keep_update_information_Contact_Back__c</field>
             <table>Account.Leads__r</table>
         </columns>
@@ -2271,6 +2266,73 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Mobile_ID__c</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Old_Kubota_App_Id__c</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Channel_to_know_Kubota_Application__c</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dealer Name (Questionnaire): Shop Name</displayNameOverride>
+            <field>Related_Lead__c.Dealer_Name_Questionnaire_Account__c.Shop_Name__c</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Dealer_Name_Questionnaire__c</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Dealer_Name_Questionnaire_Account__c</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Dealer_Name_Questionnaire__c.Name</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Interest_Model__c</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Interest_Product__c</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Time_to_be_customer__c</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Dealer_Lead_Lookup__c</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Dealer_Lead_Lookup_Account__c</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Dealer_Lead_Lookup__c.Name</field>
+            <table>Account.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Leads : Related Lead : Dealer Name : Shop Name</displayNameOverride>
+            <field>Related_Lead__c.Dealer_Lead_Lookup_Account__c.Shop_Name__c</field>
             <table>Account.Leads__r</table>
         </columns>
         <masterLabel>Leads</masterLabel>

@@ -631,6 +631,12 @@
             <field>DBMVBELN__c</field>
             <table>Order</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Name : Account Name</displayNameOverride>
+            <field>Account.Name</field>
+            <table>Order</table>
+        </columns>
         <masterLabel>Orders</masterLabel>
     </sections>
     <sections>
@@ -1538,6 +1544,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Mobile_ID__c</field>
+            <table>Order.Order__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Old_Kubota_App_Id__c</field>
             <table>Order.Order__r</table>
         </columns>
         <masterLabel>Leads</masterLabel>
