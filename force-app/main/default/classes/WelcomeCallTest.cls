@@ -1,10 +1,3 @@
-/**
- * @description       : 
- * @author            : Chanathip
- * @group             : 
- * @last modified on  : 05-17-2024
- * @last modified by  : Chanathip
-**/
 @isTest
 public class WelcomeCallTest {
 
@@ -27,7 +20,7 @@ public class WelcomeCallTest {
         prod.Family = 'TRACTOR';
         insert prod;
         
-        // First Order record with LANDTX__c = 'TH'
+        //First Order record with LANDTX__c = 'TH'
         Order dsTH = new Order();
         dsTH.Engine_Code__c = '1234';
         dsTH.AccountId = testAccount.Id;
@@ -39,7 +32,7 @@ public class WelcomeCallTest {
         dsTH.EffectiveDate = Date.newInstance(2025, 8, 16);
         insert dsTH;
         
-        // Second Order record with LANDTX__c = 'KM'
+        //Second Order record with LANDTX__c = 'KM'
         Order dsKM = new Order();
         dsKM.Engine_Code__c = '5678';
         dsKM.AccountId = testAccount.Id;
@@ -69,6 +62,10 @@ public class WelcomeCallTest {
     }
     
     public static Id getDailySales(String landTx) {
-        return [SELECT Id FROM Order WHERE LANDTX__c = :landTx LIMIT 1].Id;
+        List<Order> orders = [SELECT Id FROM Order WHERE LANDTX__c = :landTx LIMIT 1];
+        if (!orders.isEmpty()) {
+            return orders[0].Id;
+        }
+        return null;
     }
 }

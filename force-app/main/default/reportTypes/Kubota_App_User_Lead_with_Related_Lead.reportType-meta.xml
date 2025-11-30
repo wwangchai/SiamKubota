@@ -942,12 +942,6 @@
             <table>Lead.Leads__r</table>
         </columns>
         <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <displayNameOverride>Related Lead : Full Name</displayNameOverride>
-            <field>Name</field>
-            <table>Lead.Leads__r</table>
-        </columns>
-        <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Salutation</field>
             <table>Lead.Leads__r</table>
@@ -1685,17 +1679,6 @@
             <table>Lead.Leads__r</table>
         </columns>
         <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <displayNameOverride>Related Lead : Dealer Code (Questionaire)</displayNameOverride>
-            <field>Dealer_Code_Questionaire__c</field>
-            <table>Lead.Leads__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Dealer_Name_Questionnaire__c</field>
-            <table>Lead.Leads__r</table>
-        </columns>
-        <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>SystemRemark__c</field>
             <table>Lead.Leads__r</table>
@@ -1758,11 +1741,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Dealer_Lead_Lookup_Account__c</field>
-            <table>Lead.Leads__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Dealer_Name_Questionnaire_Account__c</field>
             <table>Lead.Leads__r</table>
         </columns>
         <columns>
@@ -1851,12 +1829,6 @@
             <table>Lead.Leads__r</table>
         </columns>
         <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <displayNameOverride>Related Lead : Keep update information / Contact Back</displayNameOverride>
-            <field>Keep_update_information_Contact_Back__c</field>
-            <table>Lead.Leads__r</table>
-        </columns>
-        <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Plant_1__c</field>
             <table>Lead.Leads__r</table>
@@ -1872,11 +1844,81 @@
             <table>Lead.Leads__r</table>
         </columns>
         <columns>
-            <checkedByDefault>true</checkedByDefault>
+            <checkedByDefault>false</checkedByDefault>
             <displayNameOverride>Related Lead : Dealer Name (Questionnaire)</displayNameOverride>
-            <field>Dealer_Name_Questionnaire__c</field>
-            <table>Lead.Leads__r</table>
+            <field>Related_Lead__c.Dealer_Name_Questionnaire__c</field>
+            <table>Lead</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Related Lead : Full Name</displayNameOverride>
+            <field>Related_Lead__c.Name</field>
+            <table>Lead</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Related Lead : Lead Status</displayNameOverride>
+            <field>Related_Lead__c.Status</field>
+            <table>Lead</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Plant_1__c</field>
+            <table>Lead</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Plant_1_OVS_Apps__c</field>
+            <table>Lead</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Keep_update_information_Contact_Back__c</field>
+            <table>Lead</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Interest_Product__c</field>
+            <table>Lead</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Interest_Model__c</field>
+            <table>Lead</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Channel_to_know_Kubota_Application__c</field>
+            <table>Lead</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.CreatedDate</field>
+            <table>Lead</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Dealer_Name_Questionnaire__c</field>
+            <table>Lead</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Dealer_Name_Questionnaire_Account__c</field>
+            <table>Lead</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Related_Lead__c.Dealer_Code_Questionaire__c</field>
+            <table>Lead</table>
         </columns>
         <masterLabel>Related Lead</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Old_Kubota_App_Id__c</field>
+            <table>Lead</table>
+        </columns>
+        <masterLabel>Leads</masterLabel>
     </sections>
 </ReportType>
