@@ -39,7 +39,7 @@
     </types>
     <types>
         <members>Daily_Sales_KADS_with_Kubota_app_user</members>
-        <members>Kubota_App_User_Lead_with_Related_Lead</members>
+        <!-- <members>Kubota_App_User_Lead_with_Related_Lead</members> -->
         <members>Kubota_App_User_With_Lead_and_Account</members>
         <!-- <members>Kubota_app_user_Lead_related_Welcome_call_oversea</members> -->
         <name>ReportType</name>
