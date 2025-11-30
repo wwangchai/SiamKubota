@@ -284,11 +284,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Account__c</field>
-            <table>Lead</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Activity_Code__c</field>
             <table>Lead</table>
         </columns>
@@ -923,12 +918,6 @@
             <table>Lead.Leads__r</table>
         </columns>
         <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <displayNameOverride>Related Account</displayNameOverride>
-            <field>Account__c</field>
-            <table>Lead.Leads__r</table>
-        </columns>
-        <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account__c.Age__c</field>
             <table>Lead</table>
@@ -1205,11 +1194,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>GenderIdentity</field>
-            <table>Lead.Leads__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Account__c</field>
             <table>Lead.Leads__r</table>
         </columns>
         <columns>
