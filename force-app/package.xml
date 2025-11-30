@@ -32,7 +32,7 @@
     </types>
     <types>
         <members>OVS_CRM_KUBOTA_APP/Kubota_application_result_and_AD_New_9pn</members>
-        <members>OVS_CRM_KUBOTA_APP/MTP_KUBOTA_APP_New_Ppl</members>
+        <!-- <members>OVS_CRM_KUBOTA_APP/MTP_KUBOTA_APP_New_Ppl</members> -->
         <members>OVS_CRM_KUBOTA_APP/New_Kubota_App_User_Report_all_2024N_Oqz</members>
         <members>OVS_CRM_KUBOTA_APP/X4Kubota_app_user_report_31May2024New_tVd</members>
         <name>Report</name>
