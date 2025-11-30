@@ -2,7 +2,7 @@
  * @description       :
  * @author            : Chanathip
  * @group             :
- * @last modified on  : 07-29-2025
+ * @last modified on  : 11-30-2025
  * @last modified by  : wara.wangchai
  **/
 public class WelcomeCallService {
@@ -55,10 +55,10 @@ public class WelcomeCallService {
             Group gowc = [select Id, Name from Group where Type = 'Queue'  and Name = 'CRM Center Overseas'];
             
             WelcomeCall__c wc = new WelcomeCall__c();
-            WelcomeCall__c owc = new WelcomeCall__c();
+            Welcomecall_Oversea__c owc = new Welcomecall_Oversea__c();
             
             wc.RecordTypeId = wcRec.Id;
-            owc.RecordTypeId = wctTypeOVS.Id;
+            // owc.RecordTypeId = wctTypeOVS.Id;
             //  if(ds.IS_Duplicate__c == 'No' && ds.LANDTX__c == 'TH') {
                 if((ds.IS_Duplicate__c == 'No')&&(ds.LANDTX__c == 'TH')) {
                     wc.Address_ID__c = ds.Kubota_Id__r.Address_ID__c;
@@ -143,8 +143,10 @@ public class WelcomeCallService {
                     owc.First_Name_Native__c = ds.Kubota_Id__r.First_Name_Native__c;
                     owc.Last_Name_Eng__c = ds.Last_Name__c;
                     owc.Last_Name_Native__c = ds.Kubota_Id__r.Last_Name_Native__c;
-                    owc.Mobile_number_1__c = ds.Kubota_Id__r.Mobile_ID__c;
-                    owc.Mobile_number_2__c = ds.Kubota_Id__r.Mobile_Srv__c;
+                    // owc.Mobile_number_1__c = ds.Kubota_Id__r.Mobile_ID__c;
+                    // owc.Mobile_number_2__c = ds.Kubota_Id__r.Mobile_Srv__c;
+                    owc.Mobile_phone_no_1__c = ds.Kubota_Id__r.Mobile_ID__c;
+                    owc.Mobile_phone_no_2__c = ds.Kubota_Id__r.Mobile_Srv__c;                    
                     owc.Model__c = ds.Product__r.SKC_Model__c;
                     owc.OwnerId = gowc.Id;
                     owc.Payment_Method__c = ds.Payment_Method__c;
