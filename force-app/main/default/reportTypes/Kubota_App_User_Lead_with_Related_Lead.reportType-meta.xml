@@ -814,11 +814,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Dealer_Lead_Lookup_Account__c</field>
-            <table>Lead</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Dealer_Name_Questionnaire_Account__c</field>
             <table>Lead</table>
         </columns>
@@ -948,11 +943,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Username__c</field>
-            <table>Lead.Leads__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Dealer__c</field>
             <table>Lead.Leads__r</table>
         </columns>
         <columns>
@@ -1234,11 +1224,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Dealer_Name__c</field>
-            <table>Lead.Leads__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Dealer__c</field>
             <table>Lead.Leads__r</table>
         </columns>
         <columns>
@@ -1715,11 +1700,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LEN__c</field>
-            <table>Lead.Leads__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Dealer_Lead_Lookup_Account__c</field>
             <table>Lead.Leads__r</table>
         </columns>
         <columns>
